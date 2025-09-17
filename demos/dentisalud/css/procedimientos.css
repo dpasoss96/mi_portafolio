@@ -1,0 +1,148 @@
+/* ===== Tokens ===== */
+:root{
+  --brand:#54cbd0;
+  --brand-600:#36b7bd;
+  --brand-700:#1ea3aa;
+  --accent:#e99034;
+  --ink:#1f2937;
+}
+body{ font-family:"Jost",sans-serif; color:var(--ink); }
+
+/* ===== Navbar (estilo index) ===== */
+.navbar{
+  background-color: var(--brand);
+}
+.navbar-brand{
+  color:#fff !important;
+  font-weight:bold;
+  font-family:"Jost",sans-serif;
+}
+.navbar-brand img{
+  max-height:60px;
+  margin-right:10px;
+}
+.navbar-nav .nav-link{
+  color:#fff !important;
+  margin-right:35px;
+  font-size:1.5rem;
+  font-family:"Jost",sans-serif;
+}
+.navbar-nav .nav-link:hover{
+  color:var(--accent) !important;
+  cursor:pointer;
+  transition:color .3s ease;
+}
+/* Si tu <nav> no usa .navbar-dark, asegura el ícono del toggler en blanco */
+.navbar .navbar-toggler{
+  border-color: rgba(255,255,255,.55);
+}
+.navbar .navbar-toggler-icon{
+  filter: invert(1) grayscale(100%);
+}
+
+/******************************* FIN Nav **************************************/
+
+/* ===== Encabezado de página ===== */
+.section-intro{
+  padding:2.25rem 0 1.5rem;
+  text-align:center;
+}
+.section-intro h1{ font-weight:700; letter-spacing:.2px; }
+.section-intro p{ max-width:860px; margin:.5rem auto 0; color:#4b5563; }
+
+/* ===== Barra de filtros (sin buscador) ===== */
+.filters-bar{
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:14px;
+  padding:.55rem .75rem;
+  margin:0 auto 1rem;
+  max-width:1100px;
+}
+.btn-filters{
+  border-radius:999px;
+  border-width:1.5px;
+  font-weight:500;
+  padding:.45rem 1rem;
+  line-height:1.1;
+  white-space:nowrap;
+}
+.dropdown-menu-filters{ padding:.25rem; border-radius:12px; min-width:260px; }
+.dropdown-menu-filters .dropdown-item{ padding:.45rem .7rem; border-radius:999px; }
+
+/* ===== Cards de tratamientos ===== */
+.tratamiento .card{
+  border:0;
+  overflow:hidden;
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.tratamiento .card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 24px rgba(0,0,0,.08);
+}
+.ratio .card-img-top{ object-fit:cover; }
+
+.price-badge{
+  display:inline-block;
+  width:auto; height:auto;
+  line-height:1;
+  white-space:nowrap;
+  max-width:calc(100% - 1.2rem);
+  overflow:hidden; text-overflow:ellipsis;
+  background:rgba(0,0,0,.55);
+  color:#fff;
+  padding:.35rem .7rem;
+  /* border-radius:999px; */
+  pointer-events:none;   /* no bloquea la imagen */
+  z-index:2;
+}
+
+.card-title{ font-weight:700; }
+.card-text{ color:#4b5563; }
+
+.list-check{ padding-left:0; list-style:none; }
+.list-check li{
+  margin:.25rem 0;
+  display:flex; gap:.5rem;
+  align-items:flex-start;
+  color:#374151;
+}
+.list-check i{ color:var(--brand-700); margin-top:.15rem; }
+
+.pill{
+  display:inline-block;
+  /* border-radius:999px; */
+  padding:.25rem .55rem;
+  font-size:.8rem;
+  background:#f3f4f6;
+  color:#374151;
+  margin-right:.35rem;
+}
+
+.cta-inline{
+  background:linear-gradient(90deg, var(--brand) 0%, var(--brand-600) 100%);
+  color:#fff;
+  border-radius:16px;
+  padding:1rem 1.25rem;
+  margin:1.5rem 0 0;
+}
+
+/* ===== Footer que NO tapa el contenido ===== */
+html, body{ height:100%; }
+body{ display:flex; min-height:100vh; flex-direction:column; }
+main{ flex:1; }             /* empuja el footer al final */
+footer{
+  background-color:#9ea5a5;
+  color:#fff;
+  text-align:center;
+  padding:8px 0;
+  font-size:14px;
+  margin-top:auto;          /* queda pegado abajo sólo si hay poco contenido */
+  /* position:static;  (por si antes quedó fixed) */
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 575.98px){
+  .navbar-nav .nav-link{ margin-right:0; font-size:1.125rem; }
+}
+

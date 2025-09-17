@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Inicio Dentisalud</title>
+
+  <!-- SEO básico -->
+  <meta name="description" content="Dentisalud: clínica dental en San José. Limpiezas, Invisalign, cosmética dental, blanqueamiento y urgencias. Agenda tu cita online.">
+  <meta name="keywords" content="dentista, clínica dental, Invisalign, blanqueamiento, urgencias dentales, San José">
+  <meta name="author" content="Dentisalud">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dentisalud | Clínica Dental">
+  <meta property="og:description" content="Cuidamos tu sonrisa con tecnología y trato humano.">
+  <meta property="og:image" content="https://tusitio.com/img/og-dentisalud.jpg">
+  <meta property="og:type" content="website">
+
+
+  <!-- JSON-LD  -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Dentisalud",
+    "image": "https://tusitio.com/img/LOGO.png",
+    "address": { "@type": "PostalAddress", "addressLocality": "San José", "addressCountry": "CR" },
+    "telephone": "+506 8888 8888",
+    "url": "https://tusitio.com/",
+    "priceRange": "$$",
+    "openingHours": "Mo-Fr 09:00-18:00",
+    "sameAs": ["https://www.facebook.com/tuperfil","https://www.instagram.com/tuperfil"]
+  }
+  </script>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        crossorigin="anonymous">
+
+  <link rel="icon" href="favicondentisalud.png">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <!-- OwlCarousel (solo para testimonios) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <section class="hero-section">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Navegación principal">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="img/LOGO.png" alt="Logo Dentisalud" class="logo">
+            Dentisalud
+          </a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                  aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html" data-translate="nav_inicio">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="procedimientos.html" data-translate="nav_cotiza">Tratamientos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html" data-translate="nav_contacto">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="galeria.html" data-translate="nav_galeria">Galería</a>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-outline-light btn-sm" href="#" role="button" data-translate="nav_agendar">Agendar Cita</a>
+              </li>
+
+              <li class="language-item ms-lg-3">
+                <span class="language-text">Es</span>
+                <label class="language-switch" for="languageSwitch">
+                  <input type="checkbox" id="languageSwitch" onclick="changeLanguage()">
+                  <span class="slider round"></span>
+                </label>
+                <span class="language-text">En</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="hero-content">
+      <h1 data-translate="hero_bienvenidos">Somos Dentisalud</h1>
+      <p data-translate="hero_ofrecemos">
+        Ofrecemos una amplia gama de servicios dentales para garantizar tu salud bucal.
+        Contamos con un equipo de profesionales altamente capacitados.
+      </p>
+    </div>
+  </section>
+
+  <!-- Botón WhatsApp accesible -->
+  <a href="https://wa.me/50688888888" class="btn-whatsapp" target="_blank" rel="noopener"
+     aria-label="Chatear por WhatsApp con Dentisalud">
+    <img src="img/whats.png" alt="" aria-hidden="true">
+  </a>
+
+  <!-- Tratamientos -->
+  <section class="container-fluid">
+    <h2 class="text-center titulo3 pb-5" data-translate="tratamientos_titulo">Opciones de Tratamientos</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-4">
+          <div class="text-center">
+            <img src="img/cepillado.jpg" class="img-fluid shadow"
+                 alt="Limpieza dental profesional" loading="lazy" decoding="async"
+                 sizes="(max-width: 768px) 100vw, 33vw">
+            <h5 class="pt-4" data-translate="odontologia_preventiva">Odontología Preventiva</h5>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-4">
+          <div class="text-center">
+            <img src="img/w11.jpg" class="img-fluid shadow"
+                 alt="Odontología restauradora" loading="lazy" decoding="async"
+                 sizes="(max-width: 768px) 100vw, 33vw">
+            <h5 class="pt-4" data-translate="odontologia_restauradora">Odontología Restauradora</h5>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-4">
+          <div class="text-center">
+            <img src="img/dolor.jpg" class="img-fluid shadow"
+                 alt="Emergencias dentales" loading="lazy" decoding="async"
+                 sizes="(max-width: 768px) 100vw, 33vw">
+            <h5 class="pt-4" data-translate="emergencias_dentales">Emergencias <br> Dentales</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Más tratamientos -->
+  <section class="container-fluid5">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-4">
+          <div class="text-center">
+            <img src="img/invisaling.jpg" class="img-fluid shadow"
+                 alt="Invisalign" loading="lazy" decoding="async"
+                 sizes="(max-width: 768px) 100vw, 33vw">
+            <h5 class="pt-4" data-translate="invisalign">Invisalign</h5>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-4">
+          <div class="text-center">
+            <img src="img/carillas.jpg" class="img-fluid shadow"
+                 alt="Cosmética dental" loading="lazy" decoding="async"
+                 sizes="(max-width: 768px) 100vw, 33vw">
+            <h5 class="pt-4" data-translate="cosmetica_dental">Cosmética Dental</h5>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-4">
+          <div class="text-center">
+            <img src="img/blanqueamiento.jpg" class="img-fluid shadow"
+                 alt="Blanqueamiento dental" loading="lazy" decoding="async"
+                 sizes="(max-width: 768px) 100vw, 33vw">
+            <h5 class="pt-4" data-translate="blanqueamiento">Blanqueamiento</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="more-info-container mt-4 text-center">
+      <a href="procedimientos.html" target="_blank" class="btn btn-info" data-translate="mas_info">Más Información</a>
+    </div>
+  </section>
+
+    <!-- Instalaciones (video responsive dentro de lightbox) -->
+<section class="custom-section reverse-section py-5">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+
+      <!-- Columna de texto + botón -->
+      <div class="col-md-6 order-md-2 mb-4 mb-md-0">
+        <h2 data-translate="ayudandote_sonrisa">Instalaciones modernas</h2>
+        <p data-translate="objetivo">
+          En Dentisalud, combinamos experiencia y calidez humana con lo último en tecnología dental. Nuestra meta es que cada visita sea una experiencia positiva. ¿Te gustaría ver dónde empieza tu nueva sonrisa?
+        </p>
+
+        <button id="boton"
+                class="btn btn-info cursor"
+                onclick="abrirLightbox()"
+                data-translate="instalaciones">
+          Nuestra clínica
+        </button>
+
+        <!-- Lightbox -->
+        <div id="video" class="lightbox" onclick="cerrarLightbox()" hidden>
+          <div class="lightbox-content" onclick="event.stopPropagation()">
+            <button onclick="cerrarLightbox()"
+                    class="lightbox-close cursor"
+                    aria-label="Cerrar video">×</button>
+
+            <div class="video-container ratio ratio-16x9">
+              
+              <div id="youtube-player"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-6 order-md-1">
+        <img id="myImg"
+             src="img/clinic.jpg"
+             class="img-fluid rounded shadow"
+             alt="Instalaciones de la clínica Dentisalud">
+        <div id="modal" class="modal">
+          <div class="close" aria-label="Cerrar imagen ampliada">&times;</div>
+          <img class="modal-content" id="img" alt="">
+          <div id="caption"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Testimonios -->
+  <section>
+    <div class="container-sm-6 pt-5">
+      <h2 class="titulos text-center" data-translate="testimonios_titulo">Testimonios de pacientes</h2>
+      <div class="pt-5"></div>
+      <div class="testimonials_container">
+        <div class="testimonials owl-carousel owl-theme">
+          <div class="item">
+            <div class="img-container">
+              <img src="img/testimonio1.jpg" alt="Paciente Alejandra" loading="lazy" decoding="async">
+            </div>
+            <h3>Alejandra Chinchilla</h3>
+            <p data-translate="testimonio1">"Gracias a Dentisalud ahora puedo sonreír tranquila, su servicio es increíble."</p>
+          </div>
+          <div class="item">
+            <div class="img-container">
+              <img src="img/testimonio2.jpg" alt="Paciente Clara" loading="lazy" decoding="async">
+            </div>
+            <h3>Clara Vargas</h3>
+            <p data-translate="testimonio2">"El Dr. Aguirre es muy profesional y atento, gracias a Dentisalud por su atención."</p>
+          </div>
+          <div class="item">
+            <div class="img-container">
+              <img src="img/testimonio3.jpg" alt="Paciente Sara" loading="lazy" decoding="async">
+            </div>
+            <h3>Sara Martínez</h3>
+            <p data-translate="testimonio3">"Antes me daba miedo ir al dentista, desde que conocí Dentisalud mi vida cambió."</p>
+          </div>
+          <div class="item">
+            <div class="img-container">
+              <img src="img/testimonio4.jpg" alt="Paciente Mario" loading="lazy" decoding="async">
+            </div>
+            <h3>Mario Fallas</h3>
+            <p data-translate="testimonio4">"Muy satisfecho con la clínica Dentisalud, muchas gracias!"</p>
+          </div>
+          <div class="item">
+            <div class="img-container">
+              <img src="img/testimonio5.jpg" alt="Paciente Luis" loading="lazy" decoding="async">
+            </div>
+            <h3>Luis Segura</h3>
+            <p data-translate="testimonio5">"Atienden bien, saben escuchar las sugerencias de los pacientes, son muy profesionales."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Banner -->
+  <section class="bannerparallax">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <p class="container text-white pt-5" data-translate="sonrisa_tarjeta">Tu sonrisa es nuestra mejor tarjeta de presentación</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dentistas -->
+  <div class="container-xxl my-5">
+    <h2 id="dentistas" data-translate="nuestros_dentistas">Nuestros Dentistas</h2>
+
+    <div class="row dentists-row g-3" role="list">
+      <div class="col-6 col-lg-3" role="listitem">
+        <div class="card dentist-card h-100 text-center shadow-sm border-0">
+          <div class="ratio ratio-1x1">
+            <img src="img/dentist1.jpg" class="dentist-photo" alt="Dra. Paula Mora" loading="lazy" decoding="async">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title mb-1">Dra. Mora</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3" role="listitem">
+        <div class="card dentist-card h-100 text-center shadow-sm border-0">
+          <div class="ratio ratio-1x1">
+            <img src="img/dentist2.jpg" class="dentist-photo" alt="Dr. Camilo Vargas" loading="lazy" decoding="async">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title mb-1">Dr. Segura</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3" role="listitem">
+        <div class="card dentist-card h-100 text-center shadow-sm border-0">
+          <div class="ratio ratio-1x1">
+            <img src="img/dentist3.jpg" class="dentist-photo" alt="Dra. Ana Gómez" loading="lazy" decoding="async">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title mb-1">Dra. Garita</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-lg-3" role="listitem">
+        <div class="card dentist-card h-100 text-center shadow-sm border-0">
+          <div class="ratio ratio-1x1">
+            <img src="img/dentist4.jpg" class="dentist-photo" alt="Dr. Juan Pablo Aguirre" loading="lazy" decoding="async">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title mb-1">Dr. Aguirre</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contador -->
+  <section class="ftco-counter" id="section-counter">
+    <div class="container">
+      <h2 class="titulos text-center" data-translate="pacientes_satisfechos">Pacientes satisfechos en Dentisalud</h2>
+      <div class="row pt-5">
+        <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap">
+          <div class="block-18 text-center">
+            <div class="text">
+              <strong class="number" data-number="56">0</strong>
+            </div>
+            <div class="text-black">
+              <h5 data-translate="limpiezas_2024">Limpiezas dentales</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+          <div class="block-18 text-center">
+            <div class="text">
+              <strong class="number" data-number="20">0</strong>
+            </div>
+            <div class="text-black">
+              <h5 data-translate="sonrisas_invisalign">Sonrisas perfectas con Invisalign</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+          <div class="block-18 text-center">
+            <div class="text">
+              <strong class="number" data-number="71">0</strong>
+            </div>
+            <div class="text-black">
+              <h5 data-translate="sonrisas_felices">Sonrisas felices</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+          <div class="block-18 text-center">
+            <div class="text">
+              <strong class="number" data-number="80">0</strong>
+            </div>
+            <div class="text-black">
+              <h5 data-translate="clientes_satisfechos">Clientes satisfechos</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <p data-translate="todos_derechos">© 2024 Todos los derechos reservados | Dentisalud </p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+  <!-- idioma -->
+  <script src="js/idioma.js"></script>
+
+  <!-- Testimonios (Owl) -->
+  <script>
+    $(function(){
+      $('.testimonials').owlCarousel({
+        loop:true, margin:12, nav:true, dots:false, autoplay:true, autoplayTimeout:4500,
+        responsive:{ 0:{items:1}, 768:{items:2}, 1200:{items:3} }
+      });
+    });
+  </script>
+
+
+  <!-- Contador -->
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".ftco-counter .number");
+    const run = el => {
+      const target = parseInt(el.dataset.number,10) || 0;
+      const start = performance.now(), dur = 1200;
+      const tick = now => {
+        const p = Math.min((now-start)/dur, 1);
+        const eased = 1 - Math.pow(1-p, 3);
+        el.textContent = Math.floor(eased * target);
+        if (p < 1) requestAnimationFrame(tick); else el.textContent = target;
+      };
+      requestAnimationFrame(tick);
+    };
+    const io = new IntersectionObserver(es=>{
+      es.forEach(e=>{ if(e.isIntersecting){ run(e.target); io.unobserve(e.target); } });
+    }, {threshold:.5});
+    counters.forEach(c=>io.observe(c));
+  });
+  </script>
+
+<!--Lightbox de youtube-->
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+  let ytApiReady = false;
+  let ytPlayer   = null;
+
+  
+  function onYouTubeIframeAPIReady(){ ytApiReady = true; }
+
+  function crearOReproducirPlayer(){
+    if (ytPlayer) {
+      try{ ytPlayer.mute(); }catch(_){}
+      ytPlayer.playVideo();
+      return;
+    }
+    if (!ytApiReady) {
+      // Fallback: mientras carga la API, inserta un iframe con autoplay/mute
+      const holder = document.getElementById('youtube-player');
+      const iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube.com/embed/OfpYDbGXrco?autoplay=1&mute=1&playsinline=1&rel=0&modestbranding=1';
+      iframe.title = 'Tour clínica Dentisalud';
+      iframe.allow = 'autoplay; encrypted-media; picture-in-picture';
+      iframe.allowFullscreen = true;
+      iframe.style.border = '0';
+      holder.replaceWith(iframe);
+      return;
+    }
+    ytPlayer = new YT.Player('youtube-player', {
+      videoId: 'OfpYDbGXrco',
+      playerVars: { autoplay:1, mute:1, rel:0, modestbranding:1, playsinline:1 },
+      events: { onReady: e => { try{e.target.mute();}catch(_){}
+                               e.target.playVideo(); } }
+    });
+  }
+
+  function abrirLightbox(){
+    const overlay = document.getElementById('video');
+    overlay.hidden = false;
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    crearOReproducirPlayer();
+  }
+
+  function cerrarLightbox(){
+    const overlay = document.getElementById('video');
+    overlay.classList.remove('open');
+    overlay.hidden = true;
+    document.body.style.overflow = '';
+    if (ytPlayer && ytPlayer.stopVideo) ytPlayer.stopVideo();
+  }
+
+  // Cerrar con ESC
+  document.addEventListener('keydown', e=>{
+    if(e.key === 'Escape'){
+      const overlay = document.getElementById('video');
+      if (!overlay.hidden) cerrarLightbox();
+    }
+  });
+</script>
+
+  <!-- Bootstrap bundle al final -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>

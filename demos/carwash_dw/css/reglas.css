@@ -1,0 +1,90 @@
+/* Media query para ajustar en pantallas pequeñas */
+@media (max-width: 768px) {
+    .svg-divider {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .svg-divider svg {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .footer .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .col-md-4 {
+        margin-bottom: 20px;
+    }
+
+    .contact-section h1 {
+        margin-top: 30px;
+        color: #a40018; 
+        font-size: 25px;
+        
+      }
+      
+      .contact-section p {
+        color: #fff; 
+        font-size: 15px;
+      }
+
+      .contact-section .btn-success {
+        background-color: #25d366; 
+        border-color: #25d366; 
+        padding: 5px 10px; 
+        font-size: 14px; 
+        border-radius: 4px; 
+        margin-bottom: 20px;
+    }
+
+      
+}
+
+
+
+
+
+/* contacto */
+@media (max-width: 768px) {
+    #btnSend {
+        font-size: 16px; /* Ajusta el tamaño de la fuente en móviles */
+        padding: 10px 15px; /* Ajusta el padding en móviles */
+    }
+
+    .inputBox {
+        margin-bottom: 20px; /* Aumenta el espacio inferior de los campos */
+    }
+    
+    .formRow {
+        flex-direction: column; /* Coloca los campos uno debajo del otro en móvil */
+        align-items: stretch; /* Asegura que los campos ocupen todo el ancho */
+    }
+}
+
+
+
+
+/* precios */
+
+@media (max-width: 768px) {
+
+    .accordion-button {
+        font-size: 1rem; /* Reducir el tamaño de la fuente de los botones del acordeón */
+        padding: 0.75rem 1rem; /* Ajustar el padding */
+    }
+
+    .accordion-body {
+        font-size: 0.9rem; /* Reducir el tamaño de la fuente en el contenido del acordeón */
+        padding: 0.75rem 1rem;
+    }
+}
+

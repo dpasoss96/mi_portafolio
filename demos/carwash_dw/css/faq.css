@@ -1,0 +1,110 @@
+.navbar {
+    background-color: #000; 
+    width: 100%;
+}
+
+.navbar .nav-link {
+    color: #FEF9EC !important; 
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.navbar .nav-link:hover {
+    color: #a40018 !important; 
+}
+
+.navbar .navbar-toggler {
+    border-color: #a40018; 
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 8px;
+}
+
+.navbar-nav .nav-item .nav-link {
+    margin: 0;
+    padding: 0.5rem 1rem; 
+    display: flex;
+    align-items: center; 
+}
+
+
+.navbar .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.9); 
+    border: none; 
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+.navbar .dropdown-item {
+    color: white; 
+    padding: 10px 20px; 
+    transition: background-color 0.3s ease; 
+}
+
+.navbar .dropdown-item:hover {
+    background-color: rgba(69, 5, 5, 0.5); 
+    color: white; 
+}
+
+
+.navbar .dropdown-toggle::after {
+    border-top-color: white; 
+}
+
+
+.progress-bar {
+    background-color: #a40018; /* Cambia el color del relleno de la barra de progreso */
+    color: #fff; /* Color del texto dentro de la barra */
+    font-weight: bold; /* Hacer que el texto sea negrita */
+}
+
+.progress-bar {
+    transition: width 2s ease-in-out;
+}
+
+
+
+
+.accordion-button {
+    background-color: #fff; 
+    color: #000; 
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #a40018; 
+    color: #f8f9fa;
+}
+
+.accordion-body {
+    background-color: #f8f9fa; 
+    color: #333; 
+}
+
+footer h5 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  
+  footer a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    color: #d4d4d4;
+    text-decoration: underline;
+  }
+  
+  footer .fab {
+    font-size: 1.5rem;
+  }
+  
+  footer p {
+    margin-bottom: 5px;
+  }

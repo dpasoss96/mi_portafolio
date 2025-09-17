@@ -1,0 +1,547 @@
+/* ===== Botones Dentisalud - Sistema Unificado ===== */
+:root{
+  --brand-primary: #06c2cc;        
+  --brand-primary-hover:#04aeb7;
+  --brand-accent:  #e99034;        
+  --brand-accent-hover:#d67f23;
+  --btn-radius: .6rem;
+  --btn-shadow: 0 2px 8px rgba(0,0,0,.12);
+}
+
+
+.btn.btn-info{
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-family: "Jost", sans-serif;
+  color: #fff;
+  background-color: var(--brand-primary);
+  border: 2px solid var(--brand-primary);
+  text-decoration: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+.btn-info:hover{
+  background-color: var(--brand-accent);
+  border-color: var(--brand-accent);
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.btn-info:focus{
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(23, 162, 184, 0.5);
+}
+
+
+header, .navbar { position: relative; z-index: 1100; }
+.navbar .collapse { position: relative; z-index: 1101; }
+
+
+
+/* ===== Navbar ===== */
+.navbar {
+  background-color: rgb(0, 0, 0, 0.1) !important;
+}
+.navbar-brand {
+  color: #fff !important; 
+  font-weight: bold;
+  font-family: "Jost", sans-serif;
+}
+.navbar-brand img {
+  max-height: 60px;
+  margin-right: 10px;
+}
+.navbar-nav .nav-link {
+  color: #fff !important; 
+  margin-right: 15px; 
+  font-size: 1.7rem;
+  font-family: "Jost", sans-serif;
+}
+.navbar-nav .nav-link:hover {
+  color: #5be1e6 !important;
+  cursor: pointer;
+  transition: color 0.3s ease; 
+}
+
+
+
+
+.navbar .navbar-toggler { border-color: rgba(255,255,255,.55); }
+
+
+.navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 16 16'%3e%3cpath stroke='rgba(255,255,255,0.95)' stroke-linecap='round' stroke-width='2' d='M2 4h12M2 8h12M2 12h12'/%3e%3c/svg%3e") !important;
+}
+
+/* Botón del navbar (Agendar Cita) se mantiene con su estilo propio */
+.navbar-nav .nav-item .btn {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-color: #fff;
+  color: #fff;
+  margin-left: 15px; 
+  padding: 0.5rem 1rem; 
+  border-radius: 0.25rem;
+  margin-right: 40px;
+  font-family: "Jost", sans-serif;
+  font-size: 22px;
+}
+.navbar-nav .nav-item .btn:hover {
+  background-color: var(--brand-accent);
+  color: #fff;
+  border: var(--brand-accent);
+  transform: scale(1.05); 
+}
+
+
+
+/* ===== hero ===== */
+.hero-content {
+  margin-top: 90px;
+  text-align: left;
+  padding: 20px;
+  color: #fff; 
+  font-family: "Jost", sans-serif;
+}
+.hero-section .hero-content h1 {
+  font-size: 5rem; 
+  margin-bottom: 20px;
+  margin-top: 100px; 
+  font-family: "Jost", sans-serif;
+}
+.hero-section .hero-content p {
+  text-align: left;
+  font-size: 2.2rem; 
+  max-width: 800px;
+  font-family: "Jost", sans-serif;
+}
+
+
+
+.hero-section{ background: center/cover no-repeat url('../img/smile3.jpg'); min-height:100vh; display:flex; flex-direction:column; justify-content:flex-start; }
+@media (max-width:575.98px){ .hero-section{ background-image:url('../img/responsivehero.jpg'); background-position:center top; min-height:70vh; } }
+
+
+/* Móvil */
+@media (max-width: 575.98px){
+  .hero-content{
+    margin-top: 60px;        
+    padding: 16px;
+  }
+  .hero-section .hero-content h1{
+    font-size: 2.2rem;       
+    margin-top: 0;           
+    line-height: 1.15;
+  }
+  .hero-section .hero-content p{
+    font-size: 1.2rem;       
+    max-width: 92%;
+    line-height: 1.6;
+  }
+}
+
+.hero-section::before,
+.hero-section::after { z-index: 0 !important; }
+
+
+@media (max-width: 575.98px){
+  .container { max-width: 100% !important; }
+}
+
+
+/* ===== Ajustes NAV Responsive ===== */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    text-align: center;       
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1.2rem;        
+    margin: 0.5rem 0;        
+  }
+
+  .navbar-nav .nav-item .btn {
+    display: block;           
+    margin: 10px auto;        
+    font-size: 1rem;          
+    padding: 0.5rem 1rem;     
+    width: auto;              
+  }
+}
+
+
+/********************************************************FIN Hero section***********************************************/
+
+.titulo3 {
+  margin-top: 50px;
+  font-size: 2.5rem; 
+  font-weight: bold; 
+  font-family: "Jost", sans-serif;
+  color: #06c2cc;
+  margin-bottom: 30px; 
+}
+
+h5 {
+  font-size: 1.8rem; 
+  font-family: "Jost", sans-serif;
+  font-weight: 600; 
+  color: #5f5c5a; 
+  margin-top: 20px; 
+  margin-bottom: 10px; 
+}
+
+.container-fluid5 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+p { font-family: "Jost", sans-serif; }
+
+.more-info-container { text-align: center; }
+
+.more-info-container .btn { margin-top: 1rem; }
+
+/***********************************************************************************************************************/
+
+.custom-section {
+  background-color: #d4f0f2; 
+  padding: 3rem 0; 
+}
+.custom-section h2 {
+  font-size: 2.2rem; 
+  font-weight: bold; 
+  color: #06c2cc;
+  font-family: "Jost", sans-serif;
+  font-weight: 600; 
+}
+.custom-section p {
+  color: #495057;
+  font-size: 1.8rem;
+}
+.custom-btn {
+  background-color: #06c2cc; 
+  color: white; 
+  border: none; 
+  padding: 10px 20px; 
+  font-size: 18px; 
+  cursor: pointer; 
+}
+.custom-btn:hover { background-color: #88f1f8; }
+.custom-section .row { display: flex; justify-content: flex-start; }
+.custom-section .col-md-6.order-md-1 { display: flex; justify-content: flex-end; }
+.custom-section img { max-width: 85%; }
+
+
+
+@media (max-width: 767.98px) {
+  .custom-section h2 {
+    font-size: 1.5rem;      
+    text-align: center;     
+  }
+  .custom-section p {
+    font-size: 1rem;        
+    line-height: 1.5;
+    text-align: center;     
+    margin-bottom: 1.5rem;
+  }
+  .custom-section .row {
+    flex-direction: column; 
+    align-items: center;    
+    text-align: center;
+  }
+  .custom-section img {
+    max-width: 90%;         
+    margin: 0 auto 1.5rem;  
+    display: block;
+  }
+  .custom-section button,
+  .custom-section .btn {
+    display: inline-block;
+    margin: 0 auto;         
+  }
+}
+
+
+/************ TESTIMONIAL  ***************/
+.testimonials_container { overflow: hidden; }
+.testimonials {
+  display: flex; 
+  overflow-x: auto; 
+  scroll-snap-type: x mandatory; 
+}
+.item {
+  flex: 0 0 auto; 
+  margin: 0 15px; 
+  scroll-snap-align: center; 
+  text-align: center; 
+  min-width: 300px; 
+  cursor: move;
+}
+.testimonials.owl-carousel .owl-item img {
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+.titulos { font-size: 2.2rem; margin-bottom: 20px; }
+.objetivo { font-size: 1rem; margin-bottom: 30px; }
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next { font-size: 40px; }
+.titulos {
+  font-family: "Jost", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #06c2cc;
+}
+.testimonials .item h3 {
+  margin-top: 20px;
+  font-family: "Jost", sans-serif;
+  color:#e99034;
+}
+
+/* Ajuste responsive para títulos */
+@media (max-width: 767.98px) {
+  .titulos {
+    font-size: 1.7rem;   /* más pequeño en móviles */
+    text-align: center;  /* opcional: centrado */
+  }
+}
+
+
+/**************************Banner********************************/
+.bannerparallax {
+  display: flex;
+  font-family:"Jost", sans-serif ;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-attachment: fixed;
+  background-size: cover;
+  height: calc(40vh);
+  background-position: center;
+  background-image: url('../img/smile.jpg');
+  background-blend-mode: multiply;
+  overflow: hidden; 
+}
+.bannerparallax::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(38, 177, 192, 0.5); 
+  z-index: 1; 
+}
+.bannerparallax .container { position: relative; z-index: 2; }
+.bannerparallax p {
+  margin-top: -70px;
+  font-size: 42px;
+  line-height: 1.5;
+  font-family: "Jost", sans-serif;
+}
+.text-white { color: #fff; }
+.container { max-width: 960px; margin: 0 auto; }
+.pt-5 { padding-top: 20px; }
+
+
+
+@media (max-width: 767.98px) {
+  .bannerparallax p {
+    font-size: 1.4rem;        
+    line-height: 1.4;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .bannerparallax p {
+    font-size: 2rem;     
+    margin-top: -30px;   
+  }
+}
+
+
+/*******************************nuestros dentistas************************/
+.nuestros-dentistas { padding: 40px 0; }
+.nuestros-dentistas .container {
+  max-width: 1200px; margin: 0 auto; padding: 0 15px;
+}
+.nuestros-dentistas h2 {
+  font-size: 2.5rem; margin-bottom: 30px; text-align: center; font-family: "Jost", sans-serif;
+}
+.dentistas-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+}
+.dentista-item { text-align: center; }
+.dentista-item img {
+  width: 100%; height: 250px; object-fit: cover; border-radius: 10px; transition: transform 0.3s ease;
+}
+.dentista-item:hover img { transform: scale(1.05); }
+.dentista-item h3 {
+  font-size: 1.5rem; margin-top: 15px; font-family: "Jost", sans-serif;
+}
+.dentista-item p { font-size: 1rem; color: #555; }
+@media (max-width: 768px) { .dentistas-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .dentistas-grid { grid-template-columns: 1fr; } }
+
+/********************************************************************************/
+
+#dentistas {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: "Jost", sans-serif;
+  color: #06c2cc;
+  font-weight: bold;
+}
+.photo-carousel { position: relative; }
+.photo-item { position: relative; width: 100%; height: 300px; overflow: hidden; }
+.photo-item img { width: 100%; height: 100%; object-fit: cover; }
+.caption {
+  position: absolute; bottom: 0; left: 0; width: 100%;
+  background: rgba(25, 192, 230, 0.7); 
+  color: #fff; text-align: center; padding: 10px; box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+}
+
+/******************************************************************/
+
+#myImg { border-radius: 5px; cursor: pointer; transition: 0.3s; }
+#myImg:hover { opacity: 1; }
+
+.modal {
+  display: none; position: fixed; padding-top: 100px;
+  left: 0; top: 0; width: 100%; height: 100%;
+  overflow: auto; background-color: rgba(87, 247, 247, 0.4);
+}
+.modal-content { margin: auto; display: block; width: 70%; }
+#caption {
+  margin: auto; display: block; width: 80%; max-width: 700px;
+  text-align: center; color: #fff; font-size: 30px; padding: 10px 0; height: 150px;
+}
+.modal-content, #caption { animation-name: zoom; animation-duration: 0.6s; }
+@keyframes zoom { from { transform: scale(0) } to { transform: scale(1) } }
+
+.close {
+  position: absolute; top: -10px; right: 35px; color: #fff;
+  font-size: 60px; font-weight: bold; transition: 0.3s; background-color: #03988e;
+}
+.close:hover, .close:focus {
+  color: rgba(231, 176, 66, 0.87);
+  text-decoration: none; cursor: pointer;
+}
+
+/***************************************************************************/
+
+/* === Lightbox SOLO para #video (evita conflictos) === */
+#video{
+  position: fixed;
+  inset: 0;
+  display: none;                  /* se muestra con .open */
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,.85);
+  z-index: 2000;
+  padding: clamp(12px, 4vw, 48px);
+}
+#video.open{ display:flex; }
+
+/* Caja del contenido */
+#video .lightbox-content{
+  width: min(96vw, 960px);        /* ajusta 960→1100 si lo quieres más grande */
+  background: #000;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.45);
+  overflow: hidden;
+}
+
+/* El iframe llena el .ratio */
+#video .ratio{ width:100%; }
+#video .ratio > iframe{
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0;
+}
+
+/* Botón cerrar */
+#video .lightbox-close{
+  position:absolute; top:8px; right:12px;
+  background:transparent; border:0; color:#fff;
+  font-size:28px; line-height:1; cursor:pointer; z-index:10;
+}
+#video .lightbox-close:hover{ opacity:.8; }
+
+
+/********************************************************************************/
+
+
+
+
+/* Contenedor del selector de idioma */
+.language-item { display: flex; align-items: center; margin-left: 10px; }
+/* Texto de idioma */
+.language-text {
+  font-size: 19px; font-family: "Jost", sans-serif; color: #fff; margin: 0 5px;
+}
+/* Estilos del interruptor */
+.language-switch { position: relative; display: inline-block; width: 50px; height: 24px; }
+.language-switch input { opacity: 0; width: 0; height: 0; }
+.slider {
+  position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #03988e; transition: .4s; border-radius: 24px;
+}
+.slider:before {
+  position: absolute; content: ""; height: 18px; width: 18px; left: 3px; bottom: 3px;
+  background-color: white; transition: .4s; border-radius: 50%;
+}
+input:checked + .slider { background-color: #e99034; }
+input:checked + .slider:before { transform: translateX(26px); }
+/* Ajustes adicionales para la barra de navegación */
+.navbar-nav .language-item { margin-right: 20px; }
+
+/* Estilo para la sección del contador */
+.ftco-counter {
+  padding: 60px 0; background-color: #e9f7f7; font-family: "Jost", sans-serif;
+}
+.ftco-counter .titulos { font-size: 2.5rem; margin-bottom: 40px; color: #e99034; }
+.ftco-counter .counter-wrap { margin-bottom: 30px; }
+.ftco-counter .block-18 {
+  background: #fff; border-radius: 10px; padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s;
+}
+.ftco-counter .block-18:hover { transform: translateY(-10px); }
+.ftco-counter .block-18 .text { margin-bottom: 15px; }
+.ftco-counter .block-18 .number {
+  font-size: 3rem; font-family: "Jost",sans-serif; color: #06c2cc; 
+}
+.ftco-counter .block-18 .text-black h5 { font-size: 1.2rem; color: #333; }
+
+/* Botón de WhatsApp */
+.btn-whatsapp {
+  position: fixed; bottom: 20px; right: 20px; background-color: none;
+  border-radius: 56%; padding: 12px; z-index: 9999; display: block;  
+}
+.btn-whatsapp img { width: 70px; height: 70px; }
+
+/* Footer */
+footer {
+  background-color: #727272; color: #fff; padding: 20px 0; text-align: center;
+  position: relative; width: 100%; bottom: 0; 
+}
+.footer-content {
+  display: flex; justify-content: center; align-items: center;
+}
+.footer-content p { margin: 0; font-size: 14px; }
+
+
+.dentist-card { border-radius: 0rem; transition: transform .2s ease, box-shadow .2s ease; }
+.dentist-card:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,.08); }
+
+
+
+.dentist-photo { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  display: block; 
+}

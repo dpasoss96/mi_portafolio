@@ -1,0 +1,124 @@
+.navbar {
+    background-color: rgba(84, 203, 208, 1); /* #54cbd0 */
+}
+
+.navbar-brand {
+    color: #fff !important; 
+    font-weight: bold;
+    font-family: "Jost", sans-serif;
+}
+
+.navbar-brand img {
+    max-height: 60px;
+    margin-right: 10px;
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important; 
+    margin-right: 35px; 
+    font-size: 1.5rem;
+    font-family: "Jost", sans-serif;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #e99034 !important;
+    cursor: pointer;
+    transition: color 0.3s ease; 
+}
+
+
+
+/* ===== FORM: mismo look que venías usando (sin brand-primary) ===== */
+.sectionForm{
+  width:100%; padding:24px; background:#d9f2f3;
+  border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,.08);
+  height:100%; /* para igualar altura con la info en desktop */
+}
+.containerForm{ width:100%; max-width:760px; margin:0 auto; }
+.tituloSeccion5{ color:var(--brand-700); font-weight:700; margin-bottom:16px; }
+
+.inputBox{ position:relative; margin-bottom:1.25rem; }
+.inputBox input[type="text"],
+.inputBox input[type="email"],
+.inputBox input[type="tel"],
+.inputBox input[type="number"],
+.inputBox textarea{
+  width:100%; padding:12px; border:1px solid #cfd8dc; border-radius:8px; background:#fff;
+}
+.inputBox textarea{ min-height:140px; resize:vertical; }
+.inputBox .text{
+  position:absolute; left:12px; top:10px; color:#7b8a92; transition:.2s; pointer-events:none; background:#fff; padding:0 .25rem;
+}
+.inputBox input:focus + .text,
+.inputBox input:not(:placeholder-shown) + .text,
+.inputBox textarea:focus + .text,
+.inputBox textarea:not(:placeholder-shown) + .text{
+  top:-10px; font-size:.8rem; color:var(--brand-700);
+}
+
+/
+#btnSend{
+  -webkit-appearance: button;
+  appearance: button;
+  display:inline-block;
+  min-width: 180px;
+  padding: .85rem 2rem;
+  border-radius: .75rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+
+  
+  color: #fff !important;
+  background-color: var(--brand, #54cbd0) !important;
+  border: 2px solid var(--brand, #54cbd0) !important;
+
+  box-shadow: 0 6px 16px rgba(0,0,0,.12);
+  transition: transform .2s ease, background-color .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+#btnSend:hover{
+  background-color: var(--accent, #e99034) !important;
+  border-color: var(--accent, #e99034) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(0,0,0,.16);
+}
+
+#btnSend:focus{
+  outline: none;
+  box-shadow: 0 0 0 .25rem rgba(84,203,208,.25);
+}
+
+
+
+.card-info{
+  background:#d9f2f3; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,.08);
+  padding:24px; height:100%;
+}
+.card-info h3{ font-weight:700; color:var(--brand-700); }
+.card-info p{ margin-bottom:.5rem; color:#374151; }
+.card-info i{ color:var(--brand-700); margin-right:.5rem; }
+.card-info a{ color:var(--brand-700); text-decoration:none; }
+.card-info a:hover{ color:var(--accent); text-decoration:underline; }
+.card-info hr{ opacity:.15; }
+
+/* Botón WhatsApp de la tarjeta */
+.whats-btn{
+  background:#25D366; color:#fff; border:0; border-radius:999px;
+  padding:.55rem 1rem; font-weight:600; display:inline-flex; align-items:center; gap:.4rem;
+}
+.whats-btn:hover{ filter:brightness(.95); color:#fff; }
+
+
+.map-wrap{ border-radius:16px; overflow:hidden; box-shadow:0 10px 24px rgba(0,0,0,.06); }
+.map-wrap .ratio > iframe{ border:0; }
+
+
+/* Footer */
+footer {
+  background-color: #727272; color: #fff; padding: 20px 0; text-align: center;
+  position: relative; width: 100%; bottom: 0; 
+}
+.footer-content {
+  display: flex; justify-content: center; align-items: center;
+}
+.footer-content p { margin: 0; font-size: 14px; }

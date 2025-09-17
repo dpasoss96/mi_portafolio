@@ -1,0 +1,465 @@
+body {
+    font-family: "Afacad", sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+
+
+
+
+
+/* Navbar */
+.navbar {
+    padding: 0.3rem 1rem;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    background-color: #fff; 
+}
+  
+  .navbar-brand img {
+    height: 170px; 
+    width: auto; 
+  }
+  
+  .navbar-toggler {
+    padding: 0.25rem 0.5rem;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.3rem 0.8rem; 
+    font-size: 1.2rem; 
+    font-family: "Afacad", sans-serif;
+  }
+  
+
+  .navbar-toggler {
+    padding: 0.25rem 0.5rem; 
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #e1c290; 
+    border-radius: 30px;
+  }
+
+
+  .navbar-nav .nav-link.btn {
+    background-color: #fff; 
+    color: #e1c290; 
+    font-weight: bold; 
+    padding: 0.6rem 1.2rem; 
+    border: 2px solid #e1c290; 
+    border-radius: 50px; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    display: inline-block; 
+    font-family: "Afacad", sans-serif;
+  }
+
+  .navbar-nav .nav-link.btn:hover {
+    background-color: #e1c290; 
+    color: #fff; 
+    transform: scale(1.05); 
+  }
+
+
+
+  @media (max-width: 768px) {
+    .navbar-toggler {
+        border: 1px solid #e1c290;
+        margin-top: -40px;
+      }
+
+
+      .navbar-brand img {
+        height: 120px;  
+        margin-top: -30px;
+      }
+    
+      .navbar-nav .nav-link {
+          font-size: 1.3rem;
+          color: #e1c290; 
+          background-color: #fff; 
+          padding: 0.6rem 1rem; 
+          border-radius: 25px; 
+          transition: all 0.3s ease;
+          font-family: "Afacad", sans-serif; 
+      }
+
+      .navbar-nav .nav-link.btn {
+        font-size: 1rem; 
+        padding: 0.5rem 1rem;
+        font-family: "Afacad", sans-serif;
+      }
+    }
+
+
+
+
+
+
+    .seccion-veterinarias {
+        background-color: #f9f9f9; /* Fondo suave */
+        padding: 40px 0;
+    }
+    
+    .seccion-veterinarias h2 {
+        font-size: 2.3rem; 
+        color: #333; 
+        text-align: center;
+    }
+    
+    .seccion-veterinarias .subtitulo {
+        font-size: 1.5rem;
+        color: #666;
+        margin-bottom: 40px;
+    }
+    
+    .card {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 500px; /* Establece un tamaño máximo más pequeño */
+        margin: 0 auto;
+    }
+    
+    .card-img-top {
+        height: 490px;
+        object-fit: cover;
+    }
+    
+    .card-body {
+        background-color: #fff;
+        padding: 10px;
+    }
+    
+    .card-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 10px;
+    }
+    
+    .card-text {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 10px;
+    }
+    
+    .card .btn {
+        background-color: #e1c290; /* Color similar al que usas en el acordeón */
+        color: #333;
+        font-weight: bold;
+        border: none;
+        text-decoration: none;
+        border-radius: 50px;
+    }
+    
+    .card .btn:hover {
+        background-color: #c49e5b;
+        color: #fff;
+    }
+
+
+
+
+
+
+
+/* Sección principal del distribuidor */
+.seccion-distribuidor {
+    background-color: #f9f9f9; /* Fondo suave */
+    padding: 60px 0;
+    flex: 1;
+}
+
+.titulo-distribuidor {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.subtitulo {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+
+
+
+/* Estilos del formulario */
+.sectionForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px; /* Asegura que haya espacio suficiente debajo del formulario */
+    margin-bottom: 20px;
+}
+
+.containerForm {
+        min-height: 400px; /* Asegura que el formulario tenga una altura mínima */
+        padding: 40px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 100%;
+        max-width: 800px;
+        margin-bottom: 40px; /* Asegura que haya espacio debajo del formulario */
+    
+}
+
+.tituloSeccion5 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Estilos generales del formulario */
+.formRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.colForm {
+    width: 48%;
+}
+
+.inputBox {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.inputBox input,
+.inputBox textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.inputBox input:focus,
+.inputBox textarea:focus {
+    border-color: #e1c290;
+}
+
+.inputBox .text {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: #aaa;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.inputBox input:focus + .text,
+.inputBox textarea:focus + .text {
+    top: -10px;
+    font-size: 0.9rem;
+    color: #e1c290;
+}
+
+/* Estilo de las líneas debajo del campo */
+.inputBox .line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #e1c290;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+
+
+/* Estilo del botón de envío */
+#btnSend {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #e1c290;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#btnSend:hover {
+    background-color: #c49e5b;
+}
+
+/* Estilo de mensaje de alerta */
+#mensajeAlert {
+    color: green;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .formRow {
+        flex-direction: column;
+    }
+
+    .colForm {
+        width: 100%;
+    }
+
+    .tituloSeccion5 {
+        font-size: 1.8rem;
+    }
+
+    .inputBox input,
+    .inputBox textarea {
+        font-size: 1rem;
+    }
+
+    #btnSend {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+ /* Estilos generales del footer */
+ .footer {
+    background-color: #333; 
+    color: #fff; 
+    padding: 20px 20px;
+    font-family: "Afacad", sans-serif;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  .footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-content {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  /* Estilo de logo e información */
+  .footer-logo {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .footer-logo img {
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .footer-logo p {
+    font-size: 23px;
+    color: #fff;
+    font-family: "Afacad", sans-serif;
+    font-weight: bold;
+    margin-bottom: 5.5px;
+  }
+  
+  /* Información de contacto */
+  .footer-contact {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .footer-contact h4 {
+    font-size: 23px;
+    color: #fff;
+    margin-bottom: 15px;
+    font-family: "Afacad", sans-serif;
+
+  }
+  
+  .footer-contact p {
+    font-size: 23px;
+    margin: 8px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .footer-contact a {
+    color: #e1c290;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .footer-contact a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-contact i {
+    color: #e1c290;
+    margin-right: 8px;
+  }
+  
+  /* Enlaces rápidos */
+  .footer-links {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .footer-links h4 {
+    font-size: 23px;
+    color: #fff;
+    margin-bottom: 15px;
+    font-family: "Afacad", sans-serif;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin: 8px 0;
+  }
+  
+  .footer-links a {
+    color: #e1c290;
+    text-decoration: none;
+    font-size: 1.2rem;
+
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Derechos reservados */
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #666;
+  }
+
+

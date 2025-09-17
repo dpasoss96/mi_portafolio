@@ -1,0 +1,346 @@
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Tratamientos</title>
+    
+    <link rel="icon" href="favicondentisalud.png">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"> <!--Librería de iconos-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/procedimientos.css">
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="img/LOGO.png" alt="Logo Dentisalud" class="logo">
+                    Dentisalud
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="combo2.html">Cotice</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="3dmodel.html">Galería</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+  
+
+
+  <main>
+    <!-- Intro -->
+    <section class="section-intro container">
+      <h1 data-translate="tratamientos_titulo">Opciones de Tratamientos</h1>
+      <p data-translate="hero_ofrecemos">
+        Ofrecemos una amplia gama de servicios dentales para garantizar tu salud bucal. 
+        Contamos con un equipo de profesionales altamente capacitados.
+      </p>
+    </section>
+   
+
+    <!-- Grid de tratamientos -->
+    <section class="container">
+      <div class="row g-4 mt-1" id="grid-tratamientos">
+
+        <!-- Preventiva -->
+        <div class="col-12 col-md-6 col-lg-4 tratamiento" data-cat="preventiva">
+          <div class="card h-100 shadow-sm">
+            <div class="position-relative ratio ratio-16x9">
+              <span class="price-badge">Desde ₡25.000</span>
+              <img src="img/cepillado.jpg" class="card-img-top" alt="Odontología Preventiva">
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title" data-translate="odontologia_preventiva">Odontología Preventiva</h5>
+              <p class="card-text" data-translate="preventiva_desc">
+                Limpiezas profesionales, sellantes y flúor para evitar caries y mantener tu salud bucal.
+              </p>
+
+              <div class="mb-2">
+                <span class="pill">Duración: 40–60 min</span>
+                <span class="pill">Control semestral</span>
+              </div>
+
+              <ul class="list-check">
+                <li><i class="uil uil-check-circle"></i> Profilaxis + pulido</li>
+                <li><i class="uil uil-check-circle"></i> Sellantes y flúor según edad</li>
+                <li><i class="uil uil-check-circle"></i> Educación en higiene</li>
+              </ul>
+
+              <div class="mt-auto d-flex gap-2">
+                <a href="combo2.html" class="btn btn-outline-secondary btn-sm" data-translate="cotizar">Cotizar</a>
+                <a href="index.html#contacto" class="btn btn-info btn-sm text-white" data-translate="agendar">Agendar Cita</a>
+              </div>
+
+              <div class="cta-inline small mt-3">
+                <strong>Rango referencial:</strong> ₡25.000 – ₡45.000 <br>
+                *Puede variar según evaluación y necesidad de radiografías.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Restauradora -->
+        <div class="col-12 col-md-6 col-lg-4 tratamiento" data-cat="restauradora">
+          <div class="card h-100 shadow-sm">
+            <div class="position-relative ratio ratio-16x9">
+              <span class="price-badge">Desde ₡35.000</span>
+              <img src="img/w11.jpg" class="card-img-top" alt="Odontología Restauradora">
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title" data-translate="odontologia_restauradora">Odontología Restauradora</h5>
+              <p class="card-text" data-translate="restauradora_desc">
+                Resinas, coronas y prótesis para recuperar funcionalidad y estética.
+              </p>
+
+              <div class="mb-2">
+                <span class="pill">Materiales estéticos</span>
+                <span class="pill">Garantía</span>
+              </div>
+
+              <ul class="list-check">
+                <li><i class="uil uil-check-circle"></i> Resinas estéticas (desde ₡35.000)</li>
+                <li><i class="uil uil-check-circle"></i> Coronas (₡200.000 – ₡350.000)</li>
+                <li><i class="uil uil-check-circle"></i> Prótesis parciales/total</li>
+              </ul>
+
+              <div class="mt-auto d-flex gap-2">
+                <a href="combo2.html" class="btn btn-outline-secondary btn-sm" data-translate="cotizar">Cotizar</a>
+                <a href="index.html#contacto" class="btn btn-info btn-sm text-white" data-translate="agendar">Agendar Cita</a>
+              </div>
+
+              <div class="cta-inline small mt-3">
+                <strong>Rango referencial:</strong> ₡35.000 – ₡350.000 por pieza<br>
+                *Depende de extensión, material y laboratorio.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Emergencias -->
+        <div class="col-12 col-md-6 col-lg-4 tratamiento" data-cat="emergencias">
+          <div class="card h-100 shadow-sm">
+            <div class="position-relative ratio ratio-16x9">
+              <span class="price-badge">Consulta ₡25.000</span>
+              <img src="img/dolor.jpg" class="card-img-top" alt="Emergencias dentales">
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title" data-translate="emergencias_dentales">Emergencias Dentales</h5>
+              <p class="card-text" data-translate="emergencias_desc">
+                Atención rápida para dolor agudo, fracturas o infecciones.
+              </p>
+
+              <div class="mb-2">
+                <span class="pill">Prioridad el mismo día</span>
+                <span class="pill">Alivio inmediato</span>
+              </div>
+
+              <ul class="list-check">
+                <li><i class="uil uil-check-circle"></i> Diagnóstico + analgesia</li>
+                <li><i class="uil uil-check-circle"></i> Tratamiento temporal/definitivo</li>
+                <li><i class="uil uil-check-circle"></i> Derivación a endodoncia/cirugía si aplica</li>
+              </ul>
+
+              <div class="mt-auto d-flex gap-2">
+                <a href="https://wa.me/50688888888" target="_blank" class="btn btn-danger btn-sm">WhatsApp</a>
+                <a href="index.html#contacto" class="btn btn-info btn-sm text-white" data-translate="agendar">Agendar Cita</a>
+              </div>
+
+              <div class="cta-inline small mt-3">
+                <strong>Rango referencial:</strong> Consulta ₡25.000 – ₡40.000<br>
+                *Procedimientos adicionales se cotizan aparte.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Invisalign -->
+        <div class="col-12 col-md-6 col-lg-4 tratamiento" data-cat="invisalign">
+          <div class="card h-100 shadow-sm">
+            <div class="position-relative ratio ratio-16x9">
+              <span class="price-badge">Plan desde ₡1.400.000</span>
+              <img src="img/invisaling.jpg" class="card-img-top" alt="Invisalign">
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title" data-translate="invisalign">Invisalign</h5>
+              <p class="card-text" data-translate="invisalign_desc">
+                Alineadores transparentes para corregir tu sonrisa de forma discreta.
+              </p>
+
+              <div class="mb-2">
+                <span class="pill">Estudio 3D</span>
+                <span class="pill">Controles mensuales</span>
+              </div>
+
+              <ul class="list-check">
+                <li><i class="uil uil-check-circle"></i> Escaneo digital y simulación</li>
+                <li><i class="uil uil-check-circle"></i> Alineadores personalizados</li>
+                <li><i class="uil uil-check-circle"></i> Retenedores al finalizar</li>
+              </ul>
+
+              <div class="mt-auto d-flex gap-2">
+                <a href="combo2.html" class="btn btn-outline-secondary btn-sm" data-translate="cotizar">Cotizar</a>
+                <a href="index.html#contacto" class="btn btn-info btn-sm text-white" data-translate="agendar">Agendar Cita</a>
+              </div>
+
+              <div class="cta-inline small mt-3">
+                <strong>Rango referencial:</strong> ₡1.400.000 – ₡2.500.000<br>
+                *Según complejidad del caso y número de alineadores.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cosmética -->
+        <div class="col-12 col-md-6 col-lg-4 tratamiento" data-cat="cosmetica">
+          <div class="card h-100 shadow-sm">
+            <div class="position-relative ratio ratio-16x9">
+              <span class="price-badge">Carillas desde ₡250.000</span>
+              <img src="img/carillas.jpg" class="card-img-top" alt="Cosmética dental">
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title" data-translate="cosmetica_dental">Cosmética Dental</h5>
+              <p class="card-text" data-translate="cosmetica_desc">
+                Carillas, contorneado y armonización para una sonrisa radiante.
+              </p>
+
+              <div class="mb-2">
+                <span class="pill">Diseño de sonrisa</span>
+                <span class="pill">Resultados naturales</span>
+              </div>
+
+              <ul class="list-check">
+                <li><i class="uil uil-check-circle"></i> Carillas de resina o porcelana</li>
+                <li><i class="uil uil-check-circle"></i> Prueba digital/Mock-up</li>
+                <li><i class="uil uil-check-circle"></i> Fotografía clínica</li>
+              </ul>
+
+              <div class="mt-auto d-flex gap-2">
+                <a href="combo2.html" class="btn btn-outline-secondary btn-sm" data-translate="cotizar">Cotizar</a>
+                <a href="index.html#contacto" class="btn btn-info btn-sm text-white" data-translate="agendar">Agendar Cita</a>
+              </div>
+
+              <div class="cta-inline small mt-3">
+                <strong>Rango referencial:</strong> Resina ₡120.000 – ₡180.000 /pieza · Porcelana ₡250.000 – ₡400.000 /pieza
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blanqueamiento -->
+        <div class="col-12 col-md-6 col-lg-4 tratamiento" data-cat="blanqueamiento">
+          <div class="card h-100 shadow-sm">
+            <div class="position-relative ratio ratio-16x9">
+              <span class="price-badge">Desde ₡120.000</span>
+              <img src="img/blanqueamiento.jpg" class="card-img-top" alt="Blanqueamiento dental">
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title" data-translate="blanqueamiento">Blanqueamiento</h5>
+              <p class="card-text" data-translate="blanqueamiento_desc">
+                Técnicas seguras en clínica y/o en casa para aclarar varios tonos.
+              </p>
+
+              <div class="mb-2">
+                <span class="pill">Evaluación de sensibilidad</span>
+                <span class="pill">Resultados rápidos</span>
+              </div>
+
+              <ul class="list-check">
+                <li><i class="uil uil-check-circle"></i> Sesión en clínica</li>
+                <li><i class="uil uil-check-circle"></i> Kit domiciliario con guardas</li>
+                <li><i class="uil uil-check-circle"></i> Recomendaciones de mantenimiento</li>
+              </ul>
+
+              <div class="mt-auto d-flex gap-2">
+                <a href="combo2.html" class="btn btn-outline-secondary btn-sm" data-translate="cotizar">Cotizar</a>
+                <a href="index.html#contacto" class="btn btn-info btn-sm text-white" data-translate="agendar">Agendar Cita</a>
+              </div>
+
+              <div class="cta-inline small mt-3">
+                <strong>Rango referencial:</strong> ₡120.000 – ₡220.000<br>
+                *Según técnica, número de sesiones y cuidados.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <p class="text-muted small mt-3">
+        *Precios aproximados en colones costarricenses, pueden variar tras valoración clínica, estudios o materiales.
+      </p>
+    </section>
+  </main>
+
+  <footer class="py-4 border-top">
+    <div class="container text-center">
+      <p class="mb-0" data-translate="todos_derechos">© 2024 Todos los derechos reservados | Dentisalud</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+          crossorigin="anonymous"></script>
+
+  <script>
+    // Filtro por dropdown (sin buscador)
+    document.addEventListener('DOMContentLoaded', () => {
+      const cards = document.querySelectorAll('.tratamiento');
+      const label = document.getElementById('label-filtro');
+      const reset = document.getElementById('reset-filtro');
+
+      function applyFilter(cat){
+        cards.forEach(card => {
+          card.hidden = !(cat === 'all' || card.dataset.cat === cat);
+        });
+      }
+
+      document.querySelectorAll('.dropdown-menu-filters [data-filter]').forEach(item=>{
+        item.addEventListener('click', () => {
+          const cat = item.getAttribute('data-filter');
+          label.querySelector('span').textContent = item.textContent.trim();
+          applyFilter(cat);
+        });
+      });
+
+      // Reset (si existe botón reset)
+      if (reset){
+        reset.addEventListener('click', () => {
+          label.querySelector('span').textContent = 'Todos';
+          applyFilter('all');
+        });
+      }
+
+      // Prefiltro por ?cat=
+      const paramCat = new URLSearchParams(location.search).get('cat');
+      if (paramCat) {
+        const pre = document.querySelector(`.dropdown-menu-filters [data-filter="${paramCat}"]`);
+        if (pre) pre.click(); else applyFilter('all');
+      } else {
+        applyFilter('all');
+      }
+    });
+  </script>
+</body>
+</html>

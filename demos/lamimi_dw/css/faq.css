@@ -1,0 +1,286 @@
+body {
+    font-family: "Afacad", sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+
+
+
+
+
+/* Navbar */
+.navbar {
+    padding: 0.3rem 1rem;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    background-color: #fff; 
+}
+  
+  .navbar-brand img {
+    height: 170px; 
+    width: auto; 
+  }
+  
+  .navbar-toggler {
+    padding: 0.25rem 0.5rem;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.3rem 0.8rem; 
+    font-size: 1.2rem; 
+    font-family: "Afacad", sans-serif;
+  }
+  
+
+  .navbar-toggler {
+    padding: 0.25rem 0.5rem; 
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #e1c290; 
+    border-radius: 30px;
+  }
+
+
+  .navbar-nav .nav-link.btn {
+    background-color: #fff; 
+    color: #e1c290; 
+    font-weight: bold; 
+    padding: 0.6rem 1.2rem; 
+    border: 2px solid #e1c290; 
+    border-radius: 50px; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    display: inline-block; 
+    font-family: "Afacad", sans-serif;
+  }
+
+  .navbar-nav .nav-link.btn:hover {
+    background-color: #e1c290; 
+    color: #fff; 
+    transform: scale(1.05); 
+  }
+
+
+
+  @media (max-width: 768px) {
+    .navbar-toggler {
+        border: 1px solid #e1c290;
+        margin-top: -40px;
+      }
+
+
+      .navbar-brand img {
+        height: 120px;  
+        margin-top: -30px;
+      }
+    
+      .navbar-nav .nav-link {
+          font-size: 1.3rem;
+          color: #e1c290; 
+          background-color: #fff; 
+          padding: 0.6rem 1rem; 
+          border-radius: 25px; 
+          transition: all 0.3s ease;
+          font-family: "Afacad", sans-serif; 
+      }
+
+      .navbar-nav .nav-link.btn {
+        font-size: 1rem; 
+        padding: 0.5rem 1rem;
+        font-family: "Afacad", sans-serif;
+      }
+    }
+
+
+
+  
+    .seccion1 {
+        background-color: #fff;
+    }
+
+   
+    h2 {
+        font-size: 2.3rem; 
+        color: #333; 
+        text-align: center;
+    }
+
+   
+    .accordion-button {
+        background-color: #fff !important;
+        color: #333 !important;
+        font-weight: bold;
+        border-radius: 0.25rem;
+        transition: background-color 0.3s;
+        font-size: 1.2rem;
+    }
+
+    .accordion-button:focus {
+        box-shadow: none;
+    }
+
+    .accordion-button:not(.collapsed) {
+        background-color: #e1c290;
+    }
+
+   
+    .accordion-body {
+        background-color: #e1c290;
+        padding: 20px;
+        font-size: 1.1rem;
+        text-align: justify;
+    }
+
+   
+    .accordion-item {
+        margin-bottom: 15px;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    
+    .justificar {
+        text-align: justify;
+    }
+
+    
+    .container-fluid {
+        display: flex;
+        flex-direction: column;
+        min-height: 90vh;  
+    }
+
+
+ /* Estilos generales del footer */
+ .footer {
+    background-color: #333; 
+    color: #fff; 
+    padding: 20px 20px;
+    font-family: "Afacad", sans-serif;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  .footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-content {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  /* Estilo de logo e información */
+  .footer-logo {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .footer-logo img {
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .footer-logo p {
+    font-size: 23px;
+    color: #fff;
+    font-family: "Afacad", sans-serif;
+    font-weight: bold;
+    margin-bottom: 5.5px;
+  }
+  
+  /* Información de contacto */
+  .footer-contact {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .footer-contact h4 {
+    font-size: 23px;
+    color: #fff;
+    margin-bottom: 15px;
+    font-family: "Afacad", sans-serif;
+
+  }
+  
+  .footer-contact p {
+    font-size: 23px;
+    margin: 8px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .footer-contact a {
+    color: #e1c290;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .footer-contact a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-contact i {
+    color: #e1c290;
+    margin-right: 8px;
+  }
+  
+  /* Enlaces rápidos */
+  .footer-links {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .footer-links h4 {
+    font-size: 23px;
+    color: #fff;
+    margin-bottom: 15px;
+    font-family: "Afacad", sans-serif;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin: 8px 0;
+  }
+  
+  .footer-links a {
+    color: #e1c290;
+    text-decoration: none;
+    font-size: 1.2rem;
+
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Derechos reservados */
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  
+  
+
+

@@ -1,0 +1,698 @@
+
+
+body {
+    font-family:"Poppins", sans-serif;
+}
+
+nav {
+    background-color: #242424;
+}
+
+.nav-link:focus, .nav-link:active {
+    color: #fff;
+    background-color: transparent; /* O el color que desees */
+    outline: none; /* Para eliminar el borde si hay uno */
+}
+
+
+
+.nav-item a {
+    font-size: 17px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px;
+    transition: all 0.2s ease-in;
+}
+
+.nav-link:hover {
+    background-color: #fff; /* Mantiene el fondo blanco */
+    color: #b10c0c; /* Cambia el texto a un color oscuro para contrastar */
+    border-radius: 5px;
+}
+
+.nav-item a:hover {
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+
+.navigation-wrap .nav-item {
+    padding: 10px 0;
+}
+
+.navbar-toggler {
+    /* le quitamos el borde que trae por defecto al icono hamburguesa  */
+    border: none;
+}
+
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+
+.navbar-toggler i {
+    color:#ccc;
+    font-size: 27px;
+}
+
+
+.navbar-nav {
+    text-align: center;
+}
+
+
+
+.dropdown-menu {
+    background-color: gray; 
+    border: none;
+    padding: 0; 
+    margin: 0; 
+    box-shadow: none; 
+    width: auto;
+    
+}
+
+.dropdown-item {
+    color: #fff; 
+    padding: 5px 10px; 
+    color: #fff; 
+    display: block; 
+}
+
+.dropdown-item:hover {
+    background-color: #fff; 
+    color: #b10c0c; 
+    border-radius: 0;
+}
+
+.seccion {
+    background-image: url("../img/b1.jpg");
+    height: 890px;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+
+
+
+.navbar-brand img {
+    width: 100px;  
+    height: auto;  
+    max-width: 100%;  
+}
+
+
+.navbar-brand {
+    padding: 5px 0; 
+}
+
+
+
+.btn-primary {
+    margin-top: 20px; 
+}
+
+
+
+  .about-us {
+    background-color: #ededed; 
+    padding: 60px 0; 
+  }
+  
+  .about-us h2 {
+    margin-top: 90px;
+    font-size: 2.5rem; 
+    font-weight: 700; 
+    color: #021a87; 
+    margin-bottom: 20px; 
+    font-family:  "Poppins", sans-serif;
+  }
+  
+  .about-us p {
+    font-size: 1.3rem; 
+    line-height: 1.8; 
+    color: #3d3d3d; 
+    margin-bottom: 40px; 
+  }
+  
+  .btn-more-info {
+    display: inline-block; 
+    margin-top: 10px; 
+    padding: 10px 20px; 
+    background-color: #b10c0c; 
+    color: #fff; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.btn-more-info:hover {
+    background-color: #720e0e; 
+    transform: translateY(-5px); 
+}
+
+
+  .video-container {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%; 
+    height: 0;
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px; 
+    border: none; 
+  }
+  
+
+  /*********************************FIN NOSOTROS****************************/
+  .cursos-carousel {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.cursos-titulos {
+    margin-top: 70px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: "Poppins", sans-serif;
+}
+
+.cursos-titulos h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #021a87;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.cursos-titulos p {
+    font-size: 22px !important;
+    color: #000 !important;
+    margin: 5px 0;
+    
+}
+
+.owl-carousel .item {
+    margin: 0 15px;
+}
+
+.cursos-carousel .owl-carousel .item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.cursos-carousel .owl-carousel .item-info {
+    background-color: #ffffff;
+    color: #333;
+    padding: 15px;
+    text-align: left;
+    border-radius: 0 0 10px 10px;
+    margin-top: 10px;
+    height: 180px; 
+    overflow: hidden;
+    transition: transform 0.3s ease; 
+    
+}
+
+.cursos-carousel h3 {
+    font-size: 22px;
+    margin: 0 0 10px;
+    color: #333;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+  
+}
+
+.cursos-carousel p {
+    font-size: 16px;
+    margin: 0;
+    color: #666;
+    font-family: "Poppins", sans-serif;
+    
+}
+
+.cursos-carousel .owl-carousel .item a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+
+.cursos-carousel .owl-carousel .item:hover .item-info {
+    transform: scale(1.05); 
+}
+
+.cursos-carousel .owl-carousel .item-info:hover {
+    transform: scale(1.05); 
+}
+
+
+.item-info {
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    height: 100%; 
+    padding: 5px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+
+.btn-ver-mas {
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: transparent;
+    border-color: #021a87;
+    color: #021a87;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: auto; /* Empuja el botón hacia la parte inferior */
+    transition: background-color 0.3s ease;
+    width: 150px; /* Establece un ancho fijo */
+}
+
+
+.btn-ver-mas:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+
+
+
+
+/*************************************************************************/
+.sectionTwo h2 {
+    font-family: "Poppins", sans-serif;
+    padding-bottom: 20px;
+    color: #021a87;
+    font-size: 40px;
+    font-weight: bold; /* Negrita */
+  }
+  
+  .sectionTwo p {
+    font-family: "Poppins", sans-serif;
+    color: #000000;
+    font-size: 18px;
+    line-height: 30px;
+    
+  }
+
+  
+  
+  .sectionTwo i {
+    border-radius: 50% !important;
+    width: 6.25rem;
+    height: 6.25rem;
+    background-color: #b10c0c;
+    color: #ffffff;
+    line-height: 6.25rem;
+    font-size: 2.1875rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .sectionTwo h3 {
+    padding-bottom: 15px;
+    font-family: "Poppins", sans-serif;
+  }
+
+
+  /***********************************************************************/
+
+  .pricing-section {
+    margin-top: 30px;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ededed
+  }
+  
+  .pricing-section h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 40px;
+    margin-bottom: 70px;
+    color: #021a87;
+    font-weight: bold;
+  }
+  
+  .cards-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    
+  }
+  
+  .card h3 {
+    font-size: 24px;
+    color: #b10c0c;
+    margin-bottom: 15px;
+  }
+  
+  .card .price {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .card ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  .card ul li {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .btn-select-plan {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #021a87;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-select-plan:hover {
+    background-color: #020d3d;
+    border-color: #020d3d;
+  }
+  
+
+  /************************************************************************/
+  .testimonials_container {
+    overflow: hidden; 
+}
+
+.testimonials {
+    display: flex; 
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory; 
+}
+
+.item {
+    flex: 0 0 auto; 
+    margin: 0 15px; 
+    scroll-snap-align: center; 
+    text-align: center; 
+    min-width: 300px; 
+    cursor: move;
+}
+
+.testimonials.owl-carousel .owl-item img {
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+
+.titulos {
+    font-size: 40px; 
+    margin-bottom: 20px; 
+    font-family: "Poppins", sans-serif;
+}
+
+.objetivo {
+    font-size: 1rem; 
+    margin-bottom: 30px; 
+}
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+    font-size: 40px;
+}
+
+.titulos {
+    font-family: "Poppins", sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #021a87;
+}
+
+.testimonials .item h3 {
+    margin-top: 20px;
+    font-family: "Poppins", sans-serif;
+    color: #000;
+}
+
+
+.owl-nav {
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 15px; 
+}
+
+.owl-prev, .owl-next {
+
+    color: white; 
+    border: none; 
+    border-radius: 50%; 
+    width: 40px; 
+    height: 40px; 
+    display: flex; 
+    font-size: 20px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+
+
+.owl-prev {
+    margin-right: 10px; /* Espacio entre la flecha anterior y el carrusel */
+}
+
+.owl-next {
+    margin-left: 10px; /* Espacio entre la flecha siguiente y el carrusel */
+
+}
+
+
+
+/***********************************************************************/
+
+
+.info-form {
+    background-color: #ededed; 
+    padding: 40px 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.info-form h2 {
+    color: #021a87; 
+    margin-bottom: 20px; 
+}
+
+.form-group {
+    margin-bottom: 15px; 
+}
+
+.form-group label {
+    display: block; 
+    margin-bottom: 5px; 
+    font-weight: bold; 
+}
+
+.form-group input,
+.form-group textarea {
+    width: 60%; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    font-size: 16px; 
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #021a87; 
+    outline: none; 
+}
+
+.btn {
+    background-color: #021a87; 
+    color: white; 
+    padding: 10px 15px; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    cursor: pointer;
+    transition: background-color 0.3s; 
+}
+
+.btn:hover {
+    background-color: #b10c0c; /
+}
+
+
+
+.btn-whatsapp {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 1000;
+    display: block;
+    width: 80px; 
+    height: auto;
+    transition: opacity 0.3s;
+}
+
+.btn-whatsapp.hidden {
+    opacity: 0; 
+    pointer-events: none; 
+}
+
+
+.blog {
+    background-color: #f8f9fa; 
+    padding: 50px 0; 
+}
+
+.blog h2 {
+    font-size: 2.5rem; 
+    margin-bottom: -40px; 
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    color: #021a87;
+}
+
+.blog h3 {
+    font-size: 1.75rem; 
+    margin-bottom: 15px; 
+    font-weight: normal;
+}
+
+.blog p {
+    font-size: 1rem; 
+    color: #6c757d; 
+    margin-bottom: 20px; 
+}
+
+.blog .btn {
+    transition: background-color 0.3s ease; 
+}
+
+.blog .btn:hover {
+    background-color: #0056b3; 
+    color: #fff; 
+}
+
+.image-container {
+    width: 70%; 
+    margin: 0 auto 30px; 
+    text-align: center; 
+}
+
+.blog-image {
+    max-width: 70%; 
+    height: auto; 
+    border-radius: 8px; 
+}
+
+
+
+
+.blog .col-md-4 {
+    margin-bottom: 30px; 
+    padding: 20px; 
+    border: 1px solid #dee2e6; 
+    border-radius: 8px; 
+    background-color: #fff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+@media (max-width: 768px) {
+    .blog .col-md-4 {
+        margin-bottom: 20px; 
+    }
+}
+
+
+/********************************************************************/
+
+.footer {
+    background-color: #343a40; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 20px 0; /* Espaciado interno */
+}
+
+.footer .container {
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    
+    padding: 0 15px; /* Espaciado interno del contenedor */
+}
+
+.footer-content {
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center;
+    flex-wrap: wrap; 
+   
+}
+
+.social-media {
+    text-align: center;
+}
+
+.social-media h4 {
+    margin-bottom: 10px;
+}
+
+.social-icon {
+    color: white; 
+    font-size: 30px; 
+    margin: 0 10px; 
+    transition: transform 0.3s; 
+}
+
+.social-icon:hover {
+    transform: scale(1.1); 
+}
+
+.contact-info {
+    text-align: center; 
+}
+
+.contact-info h4 {
+    margin-bottom: 10px; 
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #ccc; 
+}
+
+
