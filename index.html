@@ -162,53 +162,154 @@
       .section-soft{ background: linear-gradient(180deg, #F0D9D7 0%, #EAD2BE 100%); }
 
       /* ===== HERO con tu foto (una sola imagen) ===== */
-      /* HERO sin recorte */
-.hero{
-  position: relative;
-  overflow: clip;
-}
+    
+    .hero{
+      position: relative;
+      overflow: clip;
+    }
 
-/* La imagen ocupa el ancho; mantiene su proporción (2400x1600) */
-.hero-img{
-  display:block;
-  width:100%;
-  height: auto;        /* ← NO se corta */
-}
 
-/* Texto por encima de la foto */
-.hero-content{
-  position:absolute; inset:0; z-index:2;
-  display:flex; align-items:center;
-  padding-block: clamp(2rem, 8vh, 6rem);
-}
+    .hero-img{
+      display:block;
+      width:100%;
+      height: auto;        
+    }
+
+    .hero-content{
+      position:absolute; inset:0; z-index:2;
+      display:flex; align-items:center;
+      padding-block: clamp(2rem, 8vh, 6rem);
+    }
+
+    .hero::after{
+      content:""; position:absolute; inset:0; z-index:1;
+    }
+
+  
+    @media (max-width:576px){
+      .hero::after{
+      display:block;
+      background: linear-gradient(
+        to top,
+      rgba(0,0,0,.55) 0%,
+      rgba(0,0,0,.40) 35%,
+      rgba(0,0,0,.00) 70%
+      );
+    }
+  }
+
+    .accent-name{ color: var(--accent); }
 
 
     
-.hero::after{
-  content:""; position:absolute; inset:0; z-index:1;
-  background: linear-gradient(90deg,
-    rgba(35,47,59,.66) 0%,
-    rgba(35,47,59,.40) 60%,
-    rgba(240,217,215,0) 85%);
+  @media (max-width: 576.98px){
+    .accent-name{ color: #fff; }                
+    .text-on-media{ color:#fff; text-shadow:0 1px 6px rgba(0,0,0,.45); }
+    .hero-content{
+      align-items: flex-end;                    
+      padding: 0 1rem 3.95rem;                    
+    }
+    #inicio h1{ font-size: clamp(1.6rem, 5.2vw, 2rem); line-height: 1.15; }
+    }
+
+    [data-bs-theme="dark"] .hero::after{
+      background: linear-gradient(90deg, rgba(0,0,0,.60) 0%, rgba(0,0,0,.35) 40%, rgba(0,0,0,0) 75%);
+    }
+
+
+    .project-card .ratio { overflow: hidden; }
+    .project-card img { transition: transform .35s ease; }
+    .project-card:hover img { transform: scale(1.04); }
+
+    .project-img{
+      width:100%;
+      height: clamp(160px, 22vw, 220px); 
+      object-fit: cover;                  
+    }
+
+    .about-img{
+      display:block;
+      width:100%;
+      max-width: 680px;
+      aspect-ratio: 4/5;          
+      object-fit: cover;
+      border-radius: 9px;
+      box-shadow: 0 10px 30px rgba(35,47,59,.12);
+      border: 1px solid rgba(35,47,59,.08);
+    }
+
+    .contact-btn{
+      border-radius: 999px;
+      padding: .6rem 1.2rem;
+      font-weight: 600;
+    }
+
+    .contact-chip{
+      border-radius: 999px;
+      padding: .48rem .9rem;
+      border: 1px solid var(--c3);
+      color: var(--c3);
+      background: transparent;
+      transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+    }
+
+    .contact-chip:hover{
+      background: var(--c3);
+      color: #fff;
+      border-color: var(--c3);
+    }
+    [data-bs-theme="dark"] .contact-chip{
+      border-color: var(--c2);
+      color: var(--c2);
+    }
+    [data-bs-theme="dark"] .contact-chip:hover{
+      background: var(--c2);
+      color: #1F0E06;
+      border-color: var(--c2);
+    }
+
+
+
+    .site-footer{
+      background: linear-gradient(180deg, #F0D9D7 0%, #EAD2BE 100%);
+      border-top: 1px solid rgba(31,14,6,.10);
+      padding: 1.1rem 0;
+      color: var(--ink);
+    }
+    .footer-link{
+      color: var(--c3);
+      text-decoration: none;
+      font-weight: 500;
+      opacity: .9;
+    }
+    .footer-link:hover{ opacity: 1; text-decoration: underline; }
+
+    .footer-top{
+      border: 1px solid var(--c3);
+      padding: .25rem .6rem;
+      border-radius: 999px;
+      text-decoration: none;
+      color: var(--c3);
+      font-weight: 600;
+    }
+    .footer-top:hover{ background: var(--c3); color:#fff; }
+
+    .brand-dot{
+      display:inline-block; width:.6rem; height:.6rem; border-radius:50%;
+      background: var(--c3);
+      box-shadow: 0 0 0 4px rgba(35,47,59,.12);
+    }
+
+/* Modo oscuro */
+[data-bs-theme="dark"] .site-footer{
+  background: rgba(35,47,59,.78);
+  border-top-color: rgba(255,255,255,.12);
+  color: var(--c1);
 }
-[data-bs-theme="dark"] .hero::after{
-  background: linear-gradient(90deg, rgba(0,0,0,.60) 0%, rgba(0,0,0,.35) 40%, rgba(0,0,0,0) 75%);
-}
-
-.text-on-media{ color: var(--ink-inverse); text-shadow: 0 2px 14px rgba(0,0,0,.35); }
-
-
-/* Suaviza el hover y fija alturas consistentes */
-  .project-card .ratio { overflow: hidden; }
-  .project-card img { transition: transform .35s ease; }
-  .project-card:hover img { transform: scale(1.04); }
-
-  .project-img{
-    width:100%;
-    height: clamp(160px, 22vw, 220px); /* mismo alto para todas */
-    object-fit: cover;                  /* recorta sin deformar */
-  }
-
+[data-bs-theme="dark"] .footer-link,
+[data-bs-theme="dark"] .footer-top{ color: var(--c2); border-color: var(--c2); }
+[data-bs-theme="dark"] .footer-top:hover{ background: var(--c2); color:#1F0E06; }
+[data-bs-theme="dark"] .brand-dot{ background: var(--c2); box-shadow: 0 0 0 4px rgba(234,210,190,.15); }
 
 
 
@@ -228,17 +329,17 @@
 
         <div id="navContent" class="collapse navbar-collapse">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
-            <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
-            <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
-            <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
-            <li class="nav-item"><a class="nav-link" href="#stack">Stack</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="#proyectos" data-i18n="nav.projects">Proyectos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#servicios" data-i18n="nav.services">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="#sobre-mi" data-i18n="nav.about">Sobre mí</a></li>
+            <li class="nav-item"><a class="nav-link" href="#stack" data-i18n="nav.stack">Stack</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto" data-i18n="nav.contact">Contacto</a></li>
           </ul>
 
           <div class="d-flex align-items-center gap-2 ms-lg-3 flex-wrap flex-lg-nowrap">
             <button id="themeToggle" class="btn btn-sm btn-outline-secondary" type="button" aria-label="Cambiar tema">🌓</button>
-            <button id="langToggle" class="btn btn-sm btn-outline-secondary" type="button" aria-label="Cambiar idioma">EN</button>
-            <a class="btn btn-sm btn-outline-primary" href="assets/CV_DianaPasos.pdf" download>Descargar CV</a>
+            <button id="langToggle" class="btn btn-sm btn-outline-secondary" type="button" data-i18n="nav.toggleLang" aria-label="Cambiar idioma">EN</button>
+            <a class="btn btn-sm btn-outline-primary" href="assets/DP_web_development.pdf" download data-i18n="nav.downloadCv">Descargar CV</a>
           </div>
         </div>
       </div>
@@ -247,29 +348,46 @@
     <!-- Contenedor principal con Scrollspy -->
     <main id="pageRoot" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="90" tabindex="0">
 
-    <section id="inicio" class="hero">
-        <img src="img/hero1.jpg" alt="Diana Pasos trabajando" class="hero-img" width="2400" height="1600">
-            <div class="container hero-content">
-                <div class="row align-items-center">
-                    <div class="col-12 col-lg-7">
-                        <h1 class="display-5 fw-semibold mb-3 text-on-media">
-                         Hola, soy <span style="color:var(--accent)">Diana Pasos</span>
-                        </h1>
-                         <p class="lead mb-4 text-on-media">
-                         Desarrolladora & diseñadora web. Creo experiencias limpias, rápidas y centradas en el usuario.
-                        </p>
-                        <div class="d-flex gap-2 flex-wrap">
-                            <a href="#proyectos" class="btn btn-primary btn-lg">Ver proyectos</a>
-                        </div>
-                    </div>
-                 </div>
+      <section id="inicio" class="hero">
+        <picture>
+    <!-- Móvil (≤576px) -->
+        <source srcset="img/hero2.jpg" type="img/hero2.jpg" media="(max-width: 576px)">
+        <source srcset="img/hero2.jpg" type="img/hero2.jpg" media="(max-width: 576px)">
+        <source srcset="img/hero2.jpg" media="(max-width: 576px)">
+
+    <!-- Desktop (>576px) -->
+        <source srcset="img/hero1.jpg" type="image/avif">
+        <source srcset="img/hero1.jpg" type="image/webp">
+        <img
+          src="img/hero1.jpg"
+          alt="Diana Pasos trabajando"
+          class="hero-img"
+          width="2400" height="1600"
+          fetchpriority="high" decoding="async">
+      </picture>
+
+        <div class="container hero-content">
+          <div class="row align-items-center">
+             <div class="col-12 col-lg-7">
+                <h1 class="display-5 fw-semibold mb-3 text-on-media" data-i18n="hero.title">
+                 Hola, soy <span class="accent-name">Diana Pasos</span>
+                </h1>
+                <p class="lead mb-4 text-on-media" data-i18n="hero.lead">
+                Desarrolladora & diseñadora web.<br>
+                Creo experiencias limpias, rápidas y enfocadas en el usuario.
+                </p>
+              <div class="d-flex gap-2 flex-wrap">
+              <a href="#proyectos" class="btn btn-primary btn-lg" data-i18n="hero.cta">Ver proyectos</a>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
       <!-- PROYECTOS -->
     <section id="proyectos" class="container py-5">
-        <h2 class="fw-semibold mb-4 text-center">Proyectos</h2>
+        <h2 class="fw-semibold mb-4 text-center" data-i18n="sections.projects">Proyectos</h2>
           <div class="row g-3 g-md-4">
 
     <!-- Proyecto 1 -->
@@ -279,9 +397,9 @@
           <img src="demos/carwash_dw/img/banner.webp" class="w-100 h-100" alt="Carwash DW">
         </div>
         <div class="card-body d-flex flex-column">
-          <h5 class="card-title">Carwash</h5>
-          <p class="card-text flex-grow-1">Sitio demo para un carwash con secciones de servicios, galería y contacto.</p>
-          <a href="demos/carwash_dw/" class="btn btn-outline-primary mt-auto">Ver demo</a>
+          <h5 class="card-title" data-i18n="projects.carwash.title">Carwash</h5>
+          <p class="card-text flex-grow-1" data-i18n="projects.carwash.desc">Sitio demo para un carwash con secciones de servicios, galería y contacto.</p>
+          <a href="demos/carwash_dw/" class="btn btn-outline-primary mt-auto" data-i18n="projects.demo">Ver demo</a>
         </div>
       </div>
     </div>
@@ -293,9 +411,9 @@
           <img src="demos/dentisalud/img/banner1.jpg" class="w-100 h-100" alt="Dentisalud">
         </div>
         <div class="card-body d-flex flex-column">
-          <h5 class="card-title">Dentisalud</h5>
-          <p class="card-text flex-grow-1">Página web para clínica dental con procedimientos, galería y contacto.</p>
-          <a href="demos/dentisalud/" class="btn btn-outline-primary mt-auto">Ver demo</a>
+          <h5 class="card-title" data-i18n="projects.dentisalud.title">Dentisalud</h5>
+          <p class="card-text flex-grow-1" data-i18n="projects.dentisalud.desc">Página web para clínica dental con procedimientos, galería y contacto.</p>
+          <a href="demos/dentisalud/" class="btn btn-outline-primary mt-auto" data-i18n="projects.demo">Ver demo</a>
         </div>
       </div>
     </div>
@@ -307,9 +425,9 @@
           <img src="demos/incecom_iw/img/banner1.webp" class="w-100 h-100" alt="Incecom IW">
         </div>
         <div class="card-body d-flex flex-column">
-          <h5 class="card-title">Incecom</h5>
-          <p class="card-text flex-grow-1">Rediseño de página institucional con secciones de cursos y servicios.</p>
-          <a href="demos/incecom_iw/" class="btn btn-outline-primary mt-auto">Ver demo</a>
+          <h5 class="card-title" data-i18n="projects.incecom.title">Incecom</h5>
+          <p class="card-text flex-grow-1" data-i18n="projects.incecom.desc">Rediseño de página institucional con secciones de cursos y servicios.</p>
+          <a href="demos/incecom_iw/" class="btn btn-outline-primary mt-auto" data-i18n="projects.demo">Ver demo</a>
         </div>
       </div>
     </div>
@@ -321,9 +439,9 @@
           <img src="demos/lamimi_dw/img/prueba.jpg" class="w-100 h-100" alt="LaMimi DW">
         </div>
         <div class="card-body d-flex flex-column">
-          <h5 class="card-title">LaMimi</h5>
-          <p class="card-text flex-grow-1">E-commerce demo para collares isabelinos para gatos con carrito y blog.</p>
-          <a href="demos/lamimi_dw/index.html" class="btn btn-outline-primary mt-auto">Ver demo</a>
+          <h5 class="card-title" data-i18n="projects.lamimi.title">LaMimi</h5>
+          <p class="card-text flex-grow-1" data-i18n="projects.lamimi.desc">E-commerce demo para collares isabelinos para gatos con carrito y blog.</p>
+          <a href="demos/lamimi_dw/index.html" class="btn btn-outline-primary mt-auto" data-i18n="projects.demo">Ver demo</a>
         </div>
       </div>
     </div>
@@ -335,9 +453,9 @@
           <img src="demos/museo_neon_dw/img/neonbanner.jpg" class="w-100 h-100" alt="Museo Neón">
         </div>
         <div class="card-body d-flex flex-column">
-          <h5 class="card-title">Museo Neón</h5>
-          <p class="card-text flex-grow-1">One-page con galería, animaciones y secciones de eventos de museo.</p>
-          <a href="demos/museo_neon_dw/onepage.html" class="btn btn-outline-primary mt-auto">Ver demo</a>
+          <h5 class="card-title" data-i18n="projects.neon.title">Museo Neón</h5>
+          <p class="card-text flex-grow-1" data-i18n="projects.neon.desc">One-page con galería, animaciones y secciones de eventos de museo.</p>
+          <a href="demos/museo_neon_dw/onepage.html" class="btn btn-outline-primary mt-auto" data-i18n="projects.demo">Ver demo</a>
         </div>
       </div>
     </div>
@@ -348,81 +466,94 @@
 
 
       <!-- SERVICIOS -->
-      <section id="servicios" class="py-5 section-soft" style="min-height:100vh">
-        <div class="container">
-          <h2 class="fw-semibold mb-4">Servicios</h2>
-          <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-              <div class="p-4 rounded-4 bg-white h-100">
-                <h5>Diseño & Frontend</h5>
-                <p class="mb-0">UI/UX, HTML, CSS, Bootstrap, animaciones, performance.</p>
+        <section id="servicios" class="section-soft py-4 py-md-5">
+          <div class="container">
+            <h2 class="fw-semibold mb-3 mb-md-4" data-i18n="sections.services">Servicios</h2>
+
+          <div class="row row-cols-1 row-cols-md-3 g-3 g-md-4">
+            <div class="col">
+              <div class="p-3 p-md-4 rounded-4 bg-white h-100">
+                <h5 class="mb-2" data-i18n="services.design.title">Diseño & Frontend</h5>
+                <p class="mb-0 small" data-i18n="services.design.desc">UI/UX, HTML, CSS, Bootstrap, animaciones,logos, mockups en figma.</p>
               </div>
             </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="p-4 rounded-4 bg-white h-100">
-                <h5>Web Apps</h5>
-                <p class="mb-0">JS, APIs, formularios, validaciones, almacenamiento.</p>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="p-4 rounded-4 bg-white h-100">
-                <h5>Brand & Contenido</h5>
-                <p class="mb-0">Identidad visual, microcopy, SEO básico.</p>
-              </div>
+
+          <div class="col">
+            <div class="p-3 p-md-4 rounded-4 bg-white h-100">
+              <h5 class="mb-2" data-i18n="services.webapps.title">Web Apps</h5>
+              <p class="mb-0 small" data-i18n="services.webapps.desc">JS, APIs, formularios, validaciones, almacenamiento, e-comerce, aplicaciones web.</p>
             </div>
           </div>
+
+          <div class="col">
+            <div class="p-3 p-md-4 rounded-4 bg-white h-100">
+              <h5 class="mb-2" data-i18n="services.brand.title">Brand & Contenido</h5>
+              <p class="mb-0 small" data-i18n="services.brand.desc">Identidad visual, microcopy, SEO básico, marca personal.</p>
+            </div>
+          </div>
+         </div>
         </div>
       </section>
+
+
+
 
       <!-- SOBRE MÍ -->
-      <section id="sobre-mi" class="container py-5" style="min-height:100vh">
-        <h2 class="fw-semibold mb-4">Sobre mí</h2>
-        <p>Breve bio, tu enfoque y lo que te diferencia. Incluye resultados concretos o clientes/proyectos clave.</p>
-      </section>
-
-      <!-- STACK -->
-      <section id="stack" class="container py-5" style="min-height:100vh">
-        <h2 class="fw-semibold mb-4">Stack</h2>
-        <ul class="mb-0">
-          <li>HTML5 / CSS3 / Bootstrap 5</li>
-          <li>JavaScript (APIs, localStorage, SweetAlert, etc.)</li>
-          <li>Diseño responsivo y optimización</li>
-        </ul>
-      </section>
-
-      <!-- CONTACTO -->
-      <section id="contacto" class="py-5 section-soft" style="min-height:100vh">
-        <div class="container">
-          <h2 class="fw-semibold mb-4">Contacto</h2>
-          <div class="row g-4">
-            <div class="col-lg-6">
-              <form class="p-4 bg-white rounded-4">
-                <div class="mb-3">
-                  <label class="form-label">Nombre</label>
-                  <input type="text" class="form-control" placeholder="Tu nombre">
+        <section id="sobre-mi" class="py-5">
+            <div class="container">
+              <div class="row g-4 align-items-center">
+                <div class="col-12 col-md-5">
+                  <img src="img/about.jpg" alt="Diana Pasos" class="about-img">
                 </div>
-                <div class="mb-3">
-                  <label class="form-label">Email</label>
-                  <input type="email" class="form-control" placeholder="nombre@correo.com">
-                </div>
-                <div class="mb-3">
-                  <label class="form-label">Mensaje</label>
-                  <textarea class="form-control" rows="4" placeholder="Cuéntame de tu proyecto"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Enviar</button>
-              </form>
-            </div>
-            <div class="col-lg-6">
-              <div class="p-4 rounded-4 bg-white h-100">
-                <h5 class="mb-2">Hablemos</h5>
-                <p class="mb-1">San José, Costa Rica</p>
-                <p class="mb-1">email@ejemplo.com</p>
-                <p class="mb-0">LinkedIn / GitHub / Instagram</p>
+                <div class="col-12 col-md-7">
+                   <h2 class="fw-semibold mb-3" data-i18n="sections.about">Sobre mí</h2>
+                   <p class="lead mb-0" data-i18n="about.body">
+                  Hola soy Diana y soy diseñadora y desarrolladora web con formación técnica y una marcada vocación creativa. Antes de dedicarme al diseño web fui profesora de música y flautista, lo que me enseñó sensibilidad, disciplina y la importancia de comunicar ideas de manera clara. También trabajé en Amazon durante 4 años como investigadora de fraude, desarrollando habilidades de análisis, resolución de problemas y atención al detalle.<br><br>
+                  Hoy combino esa experiencia con mi pasión por el diseño y la tecnología, creando sitios web funcionales y visualmente atractivos. Me interesa especialmente colaborar con artistas y emprendedores, ayudándoles a llevar su identidad al entorno digital con propuestas personalizadas, útiles y humanas.
+                  </p>
               </div>
             </div>
           </div>
+        </section>
+
+
+          <!-- CONTACTO (minimal centrado) -->
+          <section id="contacto" class="py-5">
+            <div class="container text-center">
+              <h2 class="fw-semibold mb-2" data-i18n="sections.contact">Contacto</h2>
+              <p class="text-muted mb-4" data-i18n="contact.subtitle">Disponible para proyectos freelance y colaboraciones.</p>
+
+            <div class="d-flex justify-content-center gap-2 mb-3 flex-wrap">
+              <a href="mailto:dpasoss@outlook.com" class="btn btn-primary contact-btn" data-i18n="contact.email">✉️ Escríbeme</a>
+              <a href="https://wa.me/50689777836?text=Hola%20Diana,%20vi%20tu%20portafolio%20%F0%9F%91%8B" target="_blank" rel="noopener" class="btn btn-outline-primary contact-btn" data-i18n="contact.whatsapp">WhatsApp</a>
+          </div>
+
+    <!-- Chips de redes -->
+          <div class="d-flex justify-content-center flex-wrap gap-2">
+            <a href="https://www.linkedin.com/in/dianapasossevilla" target="_blank" rel="noopener" class="btn contact-chip">LinkedIn</a>
+            <a href="https://www.instagram.com/dpasoss_" target="_blank" rel="noopener" class="btn contact-chip">Instagram</a>
+            <a href="https://github.com/dpasoss96" target="_blank" rel="noopener" class="btn contact-chip">GitHub</a>
+          </div>
         </div>
       </section>
+
+
+          
+
+
+      <!-- FOOTER -->
+        <footer class="site-footer">
+          <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+            <div class="d-flex align-items-center gap-2">
+              <span class="brand-dot" aria-hidden="true"></span>
+              <span class="small mb-0" data-i18n="footer.copy">© <span id="year"></span> Diana Pasos — Portafolio</span>
+          </div>
+
+            <a href="#inicio" class="footer-top" data-i18n="footer.backTop" aria-label="Volver arriba">↑ Arriba</a>
+        
+          </div>
+      </footer>
+
 
     </main>
 
@@ -431,6 +562,11 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
+
+
+
+
+    <script src="index.js"></script>
 
     <script>
       // Cerrar menú en móvil al hacer click
