@@ -32,6 +32,10 @@
 
         --nav-bg: rgba(240,217,215,.72); /* c1 translúcido */
         --nav-border: rgba(31,14,6,.10); /* c4 suave */
+        
+        --bs-primary: #232F3B;
+        --bs-primary-rgb: 35,47,59;
+
       }
       /* Tema oscuro (toggle 🌓) */
       [data-bs-theme="dark"]{
@@ -40,6 +44,74 @@
         --brand: var(--c2);
         --accent: var(--c2);
         --ink: var(--c1);
+      }
+      .btn-primary{
+        background-color: var(--c3);
+        border-color: var(--c3);
+        color: #fff;
+        border-width: 1px;
+        border-radius: .6rem;
+        box-shadow: none;
+        padding: .48rem .9rem;   /* más compacto */
+        font-weight: 500;
+        transition: background-color .2s ease, border-color .2s ease, transform .08s ease;
+      }
+      
+      .btn-primary:hover{
+        background-color: #1F0E06;     /* espresso */
+        border-color: #1F0E06;
+        transform: translateY(-1px);
+      }
+
+      .btn-primary:active{
+        background-color: #1b0c06;
+        border-color: #1b0c06;
+        transform: translateY(0);
+      }
+
+      .btn-primary:focus-visible{
+        outline: none;
+        box-shadow: 0 0 0 .2rem rgba(234,210,190,.55); /* halo arena */
+      }
+
+      .btn-outline-primary{
+        color: var(--c3);
+        border-color: var(--c3);
+        background: transparent;
+        border-radius: .6rem;
+        padding: .48rem .9rem;
+        font-weight: 500;
+        box-shadow: none;
+      }
+
+      .btn-outline-primary:hover{
+        color:#fff;
+        background-color: var(--c3);
+        border-color: var(--c3);
+      }
+
+
+      .btn-outline-primary:focus-visible{
+        box-shadow: 0 0 0 .2rem rgba(234,210,190,.55);
+      }
+
+      [data-bs-theme="dark"] .btn-primary{
+        background-color: var(--c2);   /* arena */
+        border-color: var(--c2);
+        color: #1F0E06;
+      }
+      [data-bs-theme="dark"] .btn-primary:hover{
+        background-color: #dfc3a4;
+        border-color: #dfc3a4;
+      }
+      [data-bs-theme="dark"] .btn-outline-primary{
+        color: var(--c2);
+        border-color: var(--c2);
+      }
+      [data-bs-theme="dark"] .btn-outline-primary:hover{
+        color: #1F0E06;
+        background-color: var(--c2);
+        border-color: var(--c2);
       }
 
       html{ scroll-behavior:smooth; }
@@ -124,6 +196,22 @@
 }
 
 .text-on-media{ color: var(--ink-inverse); text-shadow: 0 2px 14px rgba(0,0,0,.35); }
+
+
+/* Suaviza el hover y fija alturas consistentes */
+  .project-card .ratio { overflow: hidden; }
+  .project-card img { transition: transform .35s ease; }
+  .project-card:hover img { transform: scale(1.04); }
+
+  .project-img{
+    width:100%;
+    height: clamp(160px, 22vw, 220px); /* mismo alto para todas */
+    object-fit: cover;                  /* recorta sin deformar */
+  }
+
+
+
+
     </style>
   </head>
   <body>
@@ -150,7 +238,6 @@
           <div class="d-flex align-items-center gap-2 ms-lg-3 flex-wrap flex-lg-nowrap">
             <button id="themeToggle" class="btn btn-sm btn-outline-secondary" type="button" aria-label="Cambiar tema">🌓</button>
             <button id="langToggle" class="btn btn-sm btn-outline-secondary" type="button" aria-label="Cambiar idioma">EN</button>
-            <a class="btn btn-sm btn-primary" href="#contacto">Hablemos</a>
             <a class="btn btn-sm btn-outline-primary" href="assets/CV_DianaPasos.pdf" download>Descargar CV</a>
           </div>
         </div>
@@ -173,7 +260,6 @@
                         </p>
                         <div class="d-flex gap-2 flex-wrap">
                             <a href="#proyectos" class="btn btn-primary btn-lg">Ver proyectos</a>
-                            <a href="#contacto" class="btn btn-outline-primary btn-lg">Hablemos</a>
                         </div>
                     </div>
                  </div>
@@ -182,38 +268,84 @@
 
 
       <!-- PROYECTOS -->
-      <section id="proyectos" class="container py-5" style="min-height:100vh">
-        <h2 class="fw-semibold mb-4">Proyectos</h2>
-        <div class="row g-4">
-          <div class="col-md-6 col-lg-4">
-            <div class="card h-100">
-              <div class="card-body">
-                <h5 class="card-title">Proyecto 1</h5>
-                <p class="card-text">Descripción corta del proyecto, tech stack y objetivo.</p>
-                <a href="#" class="btn btn-sm btn-outline-primary">Ver más</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <div class="card h-100">
-              <div class="card-body">
-                <h5 class="card-title">Proyecto 2</h5>
-                <p class="card-text">Descripción corta del proyecto, tech stack y objetivo.</p>
-                <a href="#" class="btn btn-sm btn-outline-primary">Ver más</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <div class="card h-100">
-              <div class="card-body">
-                <h5 class="card-title">Proyecto 3</h5>
-                <p class="card-text">Descripción corta del proyecto, tech stack y objetivo.</p>
-                <a href="#" class="btn btn-sm btn-outline-primary">Ver más</a>
-              </div>
-            </div>
-          </div>
+    <section id="proyectos" class="container py-5">
+        <h2 class="fw-semibold mb-4 text-center">Proyectos</h2>
+          <div class="row g-3 g-md-4">
+
+    <!-- Proyecto 1 -->
+    <div class="col-12 col-sm-6 col-lg-4">
+      <div class="card project-card h-100">
+        <div class="ratio ratio-4x3">
+          <img src="demos/carwash_dw/img/banner.webp" class="w-100 h-100" alt="Carwash DW">
         </div>
-      </section>
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Carwash</h5>
+          <p class="card-text flex-grow-1">Sitio demo para un carwash con secciones de servicios, galería y contacto.</p>
+          <a href="demos/carwash_dw/" class="btn btn-outline-primary mt-auto">Ver demo</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Proyecto 2 -->
+    <div class="col-12 col-sm-6 col-lg-4">
+      <div class="card project-card h-100">
+        <div class="ratio ratio-4x3">
+          <img src="demos/dentisalud/img/banner1.jpg" class="w-100 h-100" alt="Dentisalud">
+        </div>
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Dentisalud</h5>
+          <p class="card-text flex-grow-1">Página web para clínica dental con procedimientos, galería y contacto.</p>
+          <a href="demos/dentisalud/" class="btn btn-outline-primary mt-auto">Ver demo</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Proyecto 3 -->
+    <div class="col-12 col-sm-6 col-lg-4">
+      <div class="card project-card h-100">
+        <div class="ratio ratio-4x3">
+          <img src="demos/incecom_iw/img/banner1.webp" class="w-100 h-100" alt="Incecom IW">
+        </div>
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Incecom</h5>
+          <p class="card-text flex-grow-1">Rediseño de página institucional con secciones de cursos y servicios.</p>
+          <a href="demos/incecom_iw/" class="btn btn-outline-primary mt-auto">Ver demo</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Proyecto 4 -->
+    <div class="col-12 col-sm-6 col-lg-4">
+      <div class="card project-card h-100">
+        <div class="ratio ratio-4x3">
+          <img src="demos/lamimi_dw/img/prueba.jpg" class="w-100 h-100" alt="LaMimi DW">
+        </div>
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">LaMimi</h5>
+          <p class="card-text flex-grow-1">E-commerce demo para collares isabelinos para gatos con carrito y blog.</p>
+          <a href="demos/lamimi_dw/index.html" class="btn btn-outline-primary mt-auto">Ver demo</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Proyecto 5 -->
+    <div class="col-12 col-sm-6 col-lg-4">
+      <div class="card project-card h-100">
+        <div class="ratio ratio-4x3">
+          <img src="demos/museo_neon_dw/img/neonbanner.jpg" class="w-100 h-100" alt="Museo Neón">
+        </div>
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Museo Neón</h5>
+          <p class="card-text flex-grow-1">One-page con galería, animaciones y secciones de eventos de museo.</p>
+          <a href="demos/museo_neon_dw/onepage.html" class="btn btn-outline-primary mt-auto">Ver demo</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
 
       <!-- SERVICIOS -->
       <section id="servicios" class="py-5 section-soft" style="min-height:100vh">
