@@ -53,13 +53,13 @@
         border-width: 1px;
         border-radius: .6rem;
         box-shadow: none;
-        padding: .48rem .9rem;   /* más compacto */
+        padding: .48rem .9rem;   
         font-weight: 500;
         transition: background-color .2s ease, border-color .2s ease, transform .08s ease;
       }
       
       .btn-primary:hover{
-        background-color: #1F0E06;     /* espresso */
+        background-color: #1F0E06;     
         border-color: #1F0E06;
         transform: translateY(-1px);
       }
@@ -72,7 +72,7 @@
 
       .btn-primary:focus-visible{
         outline: none;
-        box-shadow: 0 0 0 .2rem rgba(234,210,190,.55); /* halo arena */
+        box-shadow: 0 0 0 .2rem rgba(234,210,190,.55); 
       }
 
       .btn-outline-primary{
@@ -389,8 +389,53 @@
     <section id="proyectos" class="container py-5">
         <h2 class="fw-semibold mb-4 text-center" data-i18n="sections.projects">Proyectos</h2>
           <div class="row g-3 g-md-4">
+    
 
-    <!-- Proyecto 1 -->
+      <!-- LAMIMI-->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="card project-card h-100">
+          <div class="ratio ratio-4x3">
+            <img src="demos/lamimi_dw/img/prueba.jpg" class="w-100 h-100" alt="LaMimi DW">
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" data-i18n="projects.lamimi.title">LaMimi</h5>
+            <p class="card-text flex-grow-1" data-i18n="projects.lamimi.desc">E-commerce demo para collares isabelinos para gatos con carrito y blog.</p>
+            <a href="demos/lamimi_dw/index.html" class="btn btn-outline-primary mt-auto" data-i18n="projects.demo">Ver demo</a>
+          </div>
+        </div>
+      </div>
+
+
+
+       <!-- Museo de neon-->
+    <div class="col-12 col-sm-6 col-lg-4">
+      <div class="card project-card h-100">
+        <div class="ratio ratio-4x3">
+          <img src="demos/museo_neon_dw/img/neonbanner.jpg" class="w-100 h-100" alt="Museo Neón">
+        </div>
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title" data-i18n="projects.neon.title">Museo Neón</h5>
+          <p class="card-text flex-grow-1" data-i18n="projects.neon.desc">One-page con galería, animaciones y secciones de eventos de museo.</p>
+          <a href="demos/museo_neon_dw/onepage.html" class="btn btn-outline-primary mt-auto" data-i18n="projects.demo">Ver demo</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dentisalud -->
+      <div class="col-12 col-sm-6 col-lg-4">
+      <div class="card project-card h-100">
+        <div class="ratio ratio-4x3">
+          <img src="demos/dentisalud/img/banner1.jpg" class="w-100 h-100" alt="Dentisalud">
+        </div>
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title" data-i18n="projects.dentisalud.title">Dentisalud</h5>
+          <p class="card-text flex-grow-1" data-i18n="projects.dentisalud.desc">Página web para clínica dental con procedimientos, galería y contacto.</p>
+          <a href="demos/dentisalud/" class="btn btn-outline-primary mt-auto" data-i18n="projects.demo">Ver demo</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carwash-->
     <div class="col-12 col-sm-6 col-lg-4">
       <div class="card project-card h-100">
         <div class="ratio ratio-4x3">
@@ -403,20 +448,7 @@
         </div>
       </div>
     </div>
-
-    <!-- Proyecto 2 -->
-    <div class="col-12 col-sm-6 col-lg-4">
-      <div class="card project-card h-100">
-        <div class="ratio ratio-4x3">
-          <img src="demos/dentisalud/img/banner1.jpg" class="w-100 h-100" alt="Dentisalud">
-        </div>
-        <div class="card-body d-flex flex-column">
-          <h5 class="card-title" data-i18n="projects.dentisalud.title">Dentisalud</h5>
-          <p class="card-text flex-grow-1" data-i18n="projects.dentisalud.desc">Página web para clínica dental con procedimientos, galería y contacto.</p>
-          <a href="demos/dentisalud/" class="btn btn-outline-primary mt-auto" data-i18n="projects.demo">Ver demo</a>
-        </div>
-      </div>
-    </div>
+    
 
     <!-- Proyecto 3 -->
     <div class="col-12 col-sm-6 col-lg-4">
@@ -433,34 +465,8 @@
     </div>
 
     <!-- Proyecto 4 -->
-    <div class="col-12 col-sm-6 col-lg-4">
-      <div class="card project-card h-100">
-        <div class="ratio ratio-4x3">
-          <img src="demos/lamimi_dw/img/prueba.jpg" class="w-100 h-100" alt="LaMimi DW">
-        </div>
-        <div class="card-body d-flex flex-column">
-          <h5 class="card-title" data-i18n="projects.lamimi.title">LaMimi</h5>
-          <p class="card-text flex-grow-1" data-i18n="projects.lamimi.desc">E-commerce demo para collares isabelinos para gatos con carrito y blog.</p>
-          <a href="demos/lamimi_dw/index.html" class="btn btn-outline-primary mt-auto" data-i18n="projects.demo">Ver demo</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Proyecto 5 -->
-    <div class="col-12 col-sm-6 col-lg-4">
-      <div class="card project-card h-100">
-        <div class="ratio ratio-4x3">
-          <img src="demos/museo_neon_dw/img/neonbanner.jpg" class="w-100 h-100" alt="Museo Neón">
-        </div>
-        <div class="card-body d-flex flex-column">
-          <h5 class="card-title" data-i18n="projects.neon.title">Museo Neón</h5>
-          <p class="card-text flex-grow-1" data-i18n="projects.neon.desc">One-page con galería, animaciones y secciones de eventos de museo.</p>
-          <a href="demos/museo_neon_dw/onepage.html" class="btn btn-outline-primary mt-auto" data-i18n="projects.demo">Ver demo</a>
-        </div>
-      </div>
-    </div>
-
-
+    
+   
     <div class="col-12 col-sm-6 col-lg-4">
       <div class="card project-card h-100">
         <div class="ratio ratio-4x3">

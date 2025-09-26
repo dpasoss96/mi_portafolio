@@ -88,7 +88,7 @@ nav {
 }
 
 .seccion {
-    background-image: url("../img/b1.jpg");
+    background-image: url("img/b1.jpg");
     height: 890px;
     background-size: cover; 
     background-position: center; 
