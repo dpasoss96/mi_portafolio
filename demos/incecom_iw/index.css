@@ -88,7 +88,7 @@ nav {
 }
 
 .seccion {
-    background-image: url("img/b1.jpg");
+    background-image: url("img/b1-min.jpg");
     height: 890px;
     background-size: cover; 
     background-position: center; 
@@ -114,8 +114,6 @@ nav {
 .btn-primary {
     margin-top: 20px; 
 }
-
-
 
   .about-us {
     background-color: #ededed; 
