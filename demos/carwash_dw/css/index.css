@@ -137,33 +137,42 @@
   
 
 
-  .bannerparallax {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    background-attachment: fixed;
-    background-size: cover;
-    height: calc(50vh);
-    background-position: center;
-    background-image: url('../img/banner.webp');
-    background-blend-mode: multiply;
-    overflow: hidden; 
-}
-
-.bannerparallax::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0; 
-  z-index: 1; 
-}
-
-.bannerparallax .container {
+  .bannerparallax{
   position: relative;
-  z-index: 2;
+  display:flex; align-items:center; justify-content:center;
+  min-height: 60svh;                
+  background-image: url('../img/banner.webp');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;     
+  background-blend-mode: multiply;
+  isolation:isolate;              
+}
+
+.bannerparallax::before{
+  content:"";
+  position:absolute; inset:0;
+  background: rgba(0,0,0,.35);      
+  z-index:1;
+}
+.bannerparallax .container{ position:relative; z-index:2; }
+
+
+@supports (-webkit-touch-callout: none) {
+  .bannerparallax{ background-attachment: scroll; }
+}
+
+
+@media (max-width: 768px){
+  .bannerparallax{
+    background-attachment: scroll;  
+    min-height: 45svh;             
+    background-position: center top;
+  }
+  .bannerparallax::before{
+    background: rgba(0,0,0,.45);  
+  }
 }
 
 
