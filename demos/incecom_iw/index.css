@@ -490,11 +490,11 @@ nav {
 
 
 .owl-prev {
-    margin-right: 10px; /* Espacio entre la flecha anterior y el carrusel */
+    margin-right: 10px; 
 }
 
 .owl-next {
-    margin-left: 10px; /* Espacio entre la flecha siguiente y el carrusel */
+    margin-left: 10px; 
 
 }
 
@@ -538,6 +538,26 @@ nav {
 .form-group textarea:focus {
     border-color: #021a87; 
     outline: none; 
+}
+
+#request-info{
+  max-width: 720px;         /* ancho máximo del form */
+  margin: 0 auto;           /* centra horizontalmente */
+  background: #fff;         /* opcional para contraste */
+  padding: 20px;            /* opcional */
+  border-radius: 8px;       /* opcional */
+  box-shadow: 0 2px 10px rgba(0,0,0,.08); /* opcional */
+}
+
+.form-group input,
+.form-group textarea{
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+@media (max-width: 576px){
+  #request-info{ padding: 16px; }
 }
 
 .btn {
